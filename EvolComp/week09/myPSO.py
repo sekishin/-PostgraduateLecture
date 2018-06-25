@@ -75,7 +75,7 @@ def simulation(D,func):
     pbar.close()
     print("loop time : mean={0}".format(mean(time)))
     std = np.array(f_value)
-    print("best value: mean={0:.2e}, std_var={1:.2e}, variance={2:.2e}".format(mean(f_value), np.var(std,ddof=1), variance(f_value)))
+    print("best value: mean={0:.2e}, std_var={1:.2e}, variance={2:.2e}".format(mean(f_value), np.var(std,ddof=1), np.var(std,ddof=0)))
 
 if __name__ == "__main__":
     simulation(2, sphere)
