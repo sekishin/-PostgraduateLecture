@@ -47,8 +47,6 @@ def myDE(D, func):
     x_log = []
     while t < t_max:
         t = t + 1
-        tmp = copy.deepcopy(x)
-        x_log.append(tmp)
         for i in range(M):
             a, b, c = extract_three(i, x)
             for d in range(D):
@@ -75,6 +73,8 @@ def myDE(D, func):
         for i in range(M):
             for d in range(D):
                 x[i][d] = x_new[i][d]
+        tmp = copy.deepcopy(x)
+        x_log.append(tmp)
         if f_best < f_end:
             break
     return t, f_best, x_log
@@ -82,18 +82,19 @@ def myDE(D, func):
 def simulation(D,func):
     time = []
     f_value = []
-    x_position = []
+    x_log = []
     pbar = tqdm(total=100)
     for i in range(100):
         t, f, x = myDE(D, func)
         time.append(t)
         f_value.append(f)
-        x_position.append(x)
+        if len(x) > len(x_log):
+            x_log = x
         pbar.update(1)
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
-    makeAnimation(x_position[0], str(D)+func.__name__)
+    makeAnimation(x_log, str(D)+func.__name__)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")

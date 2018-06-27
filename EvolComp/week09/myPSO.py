@@ -43,8 +43,6 @@ def myPSO(D, func):
     x_log = []
     while t < t_max:
         t = t + 1
-        tmp = copy.deepcopy(x)
-        x_log.append(tmp)
         for i in range(M):
             f[i] = func(x[i])
             if f[i] < f_pbest[i]:
@@ -55,6 +53,8 @@ def myPSO(D, func):
                     f_gbest = f_pbest[i]
                     for d in range(D):
                         x_gbest[d] = x_pbest[i][d]
+        tmp = copy.deepcopy(x)
+        x_log.append(tmp)
         if f_gbest < Cr: break
         for i in range(M):
             for d in range(D):
