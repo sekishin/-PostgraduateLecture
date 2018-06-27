@@ -3,7 +3,7 @@ from tqdm import tqdm
 from statistics import mean, variance
 import math
 import numpy as np
-from makePSOAnimation import makeAnimation
+from makeAnimation import makeAnimation
 
 def sphere(x):
     result = 0
@@ -58,9 +58,6 @@ def myPSO(D, func):
             for d in range(D):
                 v[i][d] = next_v(v[i][d], x_pbest[i][d], x[i][d], x_gbest[d])
                 x[i][d] += v[i][d]
-    #print("loop time = {}".format(t))
-    #print("best function value = {}".format(f_gbest))
-    #print("answer = {}".format(x_gbest))
     return t, f_gbest, x_log
 
 def simulation(D,func):
