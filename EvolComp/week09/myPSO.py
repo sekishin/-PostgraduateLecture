@@ -4,6 +4,7 @@ from statistics import mean, variance
 import math
 import numpy as np
 from makeAnimation import makeAnimation
+import copy
 
 def sphere(x):
     result = 0
@@ -42,7 +43,8 @@ def myPSO(D, func):
     x_log = []
     while t < t_max:
         t = t + 1
-        x_log.append(x_pbest)
+        tmp = copy.deepcopy(x)
+        x_log.append(tmp)
         for i in range(M):
             f[i] = func(x[i])
             if f[i] < f_pbest[i]:
@@ -63,19 +65,20 @@ def myPSO(D, func):
 def simulation(D,func):
     time = []
     f_value = []
-    x_position = []
+    x_log = []
     title = str(D)+func.__name__
     pbar = tqdm(total=100)
     for i in range(100):
         t, f, x = myPSO(D, func)
         time.append(t)
         f_value.append(f)
-        x_position.append(x)
+        if len(x) > len(x_log):
+            x_log = x
         pbar.update(1)
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
-    makeAnimation(x_position, title)
+    makeAnimation(x_log, title)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")

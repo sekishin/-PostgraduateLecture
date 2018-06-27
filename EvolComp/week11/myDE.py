@@ -4,6 +4,7 @@ from statistics import mean, variance
 import math
 import numpy as np
 from makeAnimation import makeAnimation
+import copy
 
 def sphere(x):
     result = 0
@@ -46,6 +47,8 @@ def myDE(D, func):
     x_log = []
     while t < t_max:
         t = t + 1
+        tmp = copy.deepcopy(x)
+        x_log.append(tmp)
         for i in range(M):
             a, b, c = extract_three(i, x)
             for d in range(D):
@@ -72,7 +75,6 @@ def myDE(D, func):
         for i in range(M):
             for d in range(D):
                 x[i][d] = x_new[i][d]
-        x_log.append(x)
         if f_best < f_end:
             break
     return t, f_best, x_log
@@ -91,7 +93,7 @@ def simulation(D,func):
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
-    makeAnimation(x_position, str(D)+func.__name__)
+    makeAnimation(x_position[0], str(D)+func.__name__)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")
