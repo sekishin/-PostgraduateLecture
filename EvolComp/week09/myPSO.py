@@ -3,7 +3,7 @@ from tqdm import tqdm
 from statistics import mean, variance
 import math
 import numpy as np
-from makeAnimation import makeAnimation
+from makeAnimation import makeAnimation, makeGraph 
 import copy
 
 def sphere(x):
@@ -41,8 +41,10 @@ def myPSO(D, func):
     f_pbest = [float('inf') for i in range(M)] 
     x_pbest = [[10 for i in range(D)] for j in range(M)]
     x_log = []
+    f_log = []
     while t < t_max:
         t = t + 1
+        f_log.append(f_gbest)
         for i in range(M):
             f[i] = func(x[i])
             if f[i] < f_pbest[i]:
@@ -60,25 +62,29 @@ def myPSO(D, func):
             for d in range(D):
                 v[i][d] = next_v(v[i][d], x_pbest[i][d], x[i][d], x_gbest[d])
                 x[i][d] += v[i][d]
-    return t, f_gbest, x_log
+    return t, f_gbest, x_log, f_log
 
 def simulation(D,func):
     time = []
     f_value = []
     x_log = []
+    f_log = []
     title = str(D)+func.__name__
     pbar = tqdm(total=100)
     for i in range(100):
-        t, f, x = myPSO(D, func)
+        t, f, x, log = myPSO(D, func)
         time.append(t)
         f_value.append(f)
         if len(x) > len(x_log):
             x_log = x
+        if len(log) > len(f_log):
+          f_log = log
         pbar.update(1)
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
     makeAnimation(x_log, title)
+    makeGraph(f_log, title)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")

@@ -3,7 +3,7 @@ from tqdm import tqdm
 from statistics import mean, variance
 import math
 import numpy as np
-from makeAnimation import makeAnimation
+from makeAnimation import makeAnimation, makeGraph
 import copy
 
 def sphere(x):
@@ -45,6 +45,7 @@ def myDE(D, func):
     f_best = float('inf')
     x_best = [0 for i in range(D)]
     x_log = []
+    f_log = []
     while t < t_max:
         t = t + 1
         for i in range(M):
@@ -75,26 +76,31 @@ def myDE(D, func):
                 x[i][d] = x_new[i][d]
         tmp = copy.deepcopy(x)
         x_log.append(tmp)
+        f_log.append(f_best)
         if f_best < f_end:
             break
-    return t, f_best, x_log
+    return t, f_best, x_log, f_log
 
 def simulation(D,func):
     time = []
     f_value = []
     x_log = []
+    f_log = []
     pbar = tqdm(total=100)
     for i in range(100):
-        t, f, x = myDE(D, func)
+        t, f, x, log = myDE(D, func)
         time.append(t)
         f_value.append(f)
         if len(x) > len(x_log):
             x_log = x
+        if len(log) > len(f_log):
+            f_log = log
         pbar.update(1)
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
     makeAnimation(x_log, str(D)+func.__name__)
+    makeGraph(f_log, str(D)+func.__name__)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")
