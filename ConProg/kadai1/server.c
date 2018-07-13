@@ -56,10 +56,12 @@ int main(int argc, char *argv[])
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     serv_addr.sin_port = htons(port_np);
     
+    // ソケット登録    
     if (bind(sockid, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
         err_msg("server : can't bind local address");
     }
     
+    // ソケット待ち受け
     if (listen(sockid, 5) == -1) {
         err_msg("server : listen fails")
     }
