@@ -1,0 +1,5 @@
+D, method, function, f-value mean, f-value var, f-value std-var, loop time mean
+2, myPSO, sphere, 4.993e-06, 6.931e-12, 7.001e-12, 31.53
+2, myDE, sphere, 3.801e-06, 7.541e-12, 7.617e-12, 22.17
+2, myPSO, rastrigin, 4.913e-06, 8.308e-12, 8.392e-12, 68.52
+2, myDE, rastrigin, 5.140e-06, 7.685e-12, 7.763e-12, 57.46

@@ -84,8 +84,8 @@ def simulation(D,func):
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
-    makeAnimation(x_log, title)
-    makeGraph(f_log, title)
+    #makeAnimation(x_log, title)
+    #makeGraph(f_log, title)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")

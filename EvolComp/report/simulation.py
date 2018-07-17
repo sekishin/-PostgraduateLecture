@@ -1,5 +1,6 @@
 from myPSO import myPSO, sphere, rastrigin
 from myDE import myDE
+from myFA import myFA
 from tqdm import tqdm
 import numpy as np
 from statistics import mean, variance
@@ -23,7 +24,7 @@ def simulation(D, func, method):
         pbar.update(1)
     pbar.close()
     std = np.array(f_value)
-    print(D, method.__name__, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
+    print("{0}, {1}, {2}, {3:.3e}, {4:.3e}, {5:.3e}, {6:.2f}".format(D, method.__name__, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time)))
     return x_log, f_log
 
 def exec_simulation(D):
@@ -47,7 +48,7 @@ if __name__ == "__main__":
         result = exec_simulation(d)
         for f in ['sphere', 'rastrigin']:
             f_log = []
-            for m in ['myPSO', 'myDE']:
+            for m in ['myPSO', 'myDE', 'myFA']:
                 title = str(d)+f+m
                 x_log = result[f][m]['x_log']
                 makeAnimation(x_log, title)

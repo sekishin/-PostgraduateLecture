@@ -8,13 +8,13 @@ from makeGraph import makeGraph
 import copy
 
 def sphere(x):
-    result = 0
+    result = 0.0
     for elem in x:
         result += elem**2
     return result
 
 def rastrigin(x):
-    result = 0
+    result = 0.0
     for elem in x:
         result += (elem**2 - 10 * math.cos(2 * math.pi * elem) + 10)
     return result
@@ -76,7 +76,7 @@ def myFA(D, func):
                 k = i
         if f[k] < f_best:
             f_best = f[k]
-            x_best = x[k]
+            x_best = copy.deepcopy(x[k])
         for i in range(M):
             x[i] = x_new[i]
         x_log.append(copy.deepcopy(x))
@@ -104,14 +104,15 @@ def simulation(D,func):
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
-    makeAnimation(x_log, title)
+    #makeAnimation(x_log, title)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")
     simulation(2, sphere)
-    simulation(5, sphere)
-    simulation(20, sphere)
-
     simulation(2, rastrigin)
+    
+    simulation(5, sphere)
     simulation(5, rastrigin)
+    
+    simulation(20, sphere)
     simulation(20, rastrigin)
