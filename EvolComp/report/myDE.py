@@ -37,9 +37,9 @@ def myDE(D, func):
     f_end = 10**-5
     x_min = -5
     x_max = 5
-    x = [[random.uniform(x_max,x_min) for i in range(D)] for j in range(M)] 
-    x_new = [[0 for i in range(D)] for j in range(M)] 
-    v = [0 for i in range(D)] 
+    x = [[random.uniform(x_max,x_min) for i in range(D)] for j in range(M)]
+    x_new = [[0 for i in range(D)] for j in range(M)]
+    v = [0 for i in range(D)]
     u = [0 for i in range(D)]
     f = [func(i) for i in x]
     f_tmp = 0

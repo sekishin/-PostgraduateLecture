@@ -10,17 +10,17 @@ from makeGraph import makeGraph
 def simulation(D, func, method):
     time = []
     f_value = []
-    x_log = []
-    f_log = []
+    x_log = [0 for i in range(2000)]
+    f_log = [0 for i in range(2000)]
     desc = str(D)+" "+func.__name__+" "+method.__name__
     pbar = tqdm(total=100, desc=desc )
     for i in range(100):
         t, f, x, log = method(D, func)
         time.append(t)
         f_value.append(f)
-        if len(x) > len(x_log):
+        if len(x) < len(x_log) and len(x) > 20:
             x_log = x
-        if len(log) > len(f_log):
+        if len(log) < len(f_log) and len(log) > 20:
             f_log = log
         pbar.update(1)
     pbar.close()
@@ -49,10 +49,11 @@ if __name__ == "__main__":
         result = exec_simulation(d)
         for f in ['sphere', 'rastrigin']:
             f_log = []
+            label = ['PSO', 'DE', 'FA']
             for m in ['myPSO', 'myDE', 'myFA']:
                 title = str(d)+f+m
                 x_log = result[f][m]['x_log']
                 makeAnimation(x_log, title)
                 f_log.append(result[f][m]['f_log'])
             title = str(d)+f
-            makeGraph(f_log, title)
+            makeGraph(f_log, title, label)
