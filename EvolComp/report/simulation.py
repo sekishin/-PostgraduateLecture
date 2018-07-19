@@ -12,7 +12,8 @@ def simulation(D, func, method):
     f_value = []
     x_log = []
     f_log = []
-    pbar = tqdm(total=100)
+    desc = str(D)+" "+func.__name__+" "+method.__name__
+    pbar = tqdm(total=100, desc=desc )
     for i in range(100):
         t, f, x, log = method(D, func)
         time.append(t)
@@ -28,7 +29,7 @@ def simulation(D, func, method):
     return x_log, f_log
 
 def exec_simulation(D):
-    methods = [myPSO, myDE]
+    methods = [myPSO, myDE, myFA]
     funcs = [sphere, rastrigin]
     result = {}
     for f in funcs:

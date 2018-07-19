@@ -23,6 +23,7 @@ def makeAnimation(data, save):
     ax.set_ylabel('x2')
     anime = animation.ArtistAnimation(fig,ims,interval=200)
     anime.save(save+".gif", writer='imagemagick')
+    plt.close()
 
 if __name__ == "__main__":
     data = [[[i,d] for i in range(10)] for d in range(100)]
