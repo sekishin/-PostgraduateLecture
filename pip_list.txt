@@ -1,1 +1,4 @@
+cabocha-python==0.69
+mecab-python3==0.7
+numpy==1.14.5
 tqdm==4.23.4
