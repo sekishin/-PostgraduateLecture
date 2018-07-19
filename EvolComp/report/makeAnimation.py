@@ -21,7 +21,7 @@ def makeAnimation(data, save):
     ax.grid()
     ax.set_xlabel('x1')
     ax.set_ylabel('x2')
-    anime = animation.ArtistAnimation(fig,ims,interval=200)
+    anime = animation.ArtistAnimation(fig,ims,interval=50)
     anime.save(save+".gif", writer='imagemagick')
     plt.close()
 
