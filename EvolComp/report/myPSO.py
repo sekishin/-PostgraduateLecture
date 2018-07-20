@@ -34,18 +34,17 @@ def myPSO(D, func):
     t = 0
     x_min = -5
     x_max = 5
-    x = [[random.uniform(x_max,x_min) for i in range(D)] for j in range(M)] 
-    v = [[0 for i in range(D)] for j in range(M)] 
+    x = [[random.uniform(x_max,x_min) for i in range(D)] for j in range(M)]
+    v = [[0 for i in range(D)] for j in range(M)]
     f = [0 for i in range(M)]
     f_gbest = float('inf')
     x_gbest = [0 for i in range(D)]
-    f_pbest = [float('inf') for i in range(M)] 
+    f_pbest = [float('inf') for i in range(M)]
     x_pbest = [[10 for i in range(D)] for j in range(M)]
     x_log = []
-    f_log = []
+    f_log = [f_gbest]
     while t < t_max:
         t = t + 1
-        f_log.append(f_gbest)
         for i in range(M):
             f[i] = func(x[i])
             if f[i] < f_pbest[i]:
@@ -58,6 +57,7 @@ def myPSO(D, func):
                         x_gbest[d] = x_pbest[i][d]
         tmp = copy.deepcopy(x)
         x_log.append(tmp)
+        f_log.append(f_gbest)
         if f_gbest < Cr: break
         for i in range(M):
             for d in range(D):
@@ -84,8 +84,8 @@ def simulation(D,func):
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
-    makeAnimation(x_log, title)
-    makeGraph(f_log, title)
+    #makeAnimation(x_log, title)
+    #makeGraph(f_log, title)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")

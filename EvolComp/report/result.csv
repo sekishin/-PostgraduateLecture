@@ -1,0 +1,19 @@
+D, method, function, f-value mean, f-value var, f-value std-var, loop time mean
+2, myPSO, sphere, 5.339e-06, 8.420e-12, 8.505e-12, 32.89
+2, myDE, sphere, 4.216e-06, 7.885e-12, 7.964e-12, 22.54
+2, myFA, sphere, 4.930e-06, 8.644e-12, 8.731e-12, 237.83
+2, myPSO, rastrigin, 5.730e-06, 9.292e-12, 9.386e-12, 68.42
+2, myDE, rastrigin, 4.730e-06, 8.600e-12, 8.687e-12, 56.52
+2, myFA, rastrigin, 1.528e-01, 9.258e-02, 9.351e-02, 788.41
+5, myPSO, sphere, 7.242e-06, 4.167e-12, 4.209e-12, 70.82
+5, myDE, sphere, 6.532e-06, 5.578e-12, 5.635e-12, 67.51
+5, myFA, sphere, 7.137e-06, 5.338e-12, 5.392e-12, 558.56
+5, myPSO, rastrigin, 8.258e-01, 9.118e-01, 9.210e-01, 665.00
+5, myDE, rastrigin, 1.099e-01, 9.683e-02, 9.781e-02, 421.17
+5, myFA, rastrigin, 4.774e+00, 6.434e+00, 6.499e+00, 998.43
+20, myPSO, sphere, 9.061e-06, 6.728e-13, 6.795e-13, 238.20
+20, myDE, sphere, 1.440e-04, 5.424e-07, 5.478e-07, 371.97
+20, myFA, sphere, 8.832e-06, 9.273e-13, 9.367e-13, 785.57
+20, myPSO, rastrigin, 3.230e+01, 7.516e+01, 7.592e+01, 1000.00
+20, myDE, rastrigin, 2.966e+01, 4.560e+02, 4.606e+02, 1000.00
+20, myFA, rastrigin, 3.804e+01, 1.168e+02, 1.180e+02, 1000.00

@@ -1,5 +1,6 @@
 from myPSO import myPSO, sphere, rastrigin
 from myDE import myDE
+from myFA import myFA
 from tqdm import tqdm
 import numpy as np
 from statistics import mean, variance
@@ -9,25 +10,26 @@ from makeGraph import makeGraph
 def simulation(D, func, method):
     time = []
     f_value = []
-    x_log = []
-    f_log = []
-    pbar = tqdm(total=100)
+    x_log = [0 for i in range(2000)]
+    f_log = [0 for i in range(2000)]
+    desc = str(D)+" "+func.__name__+" "+method.__name__
+    pbar = tqdm(total=100, desc=desc )
     for i in range(100):
         t, f, x, log = method(D, func)
         time.append(t)
         f_value.append(f)
-        if len(x) > len(x_log):
+        if len(x) < len(x_log) and len(x) > 20:
             x_log = x
-        if len(log) > len(f_log):
+        if len(log) < len(f_log) and len(log) > 20:
             f_log = log
         pbar.update(1)
     pbar.close()
     std = np.array(f_value)
-    print(D, method.__name__, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
+    print("{0}, {1}, {2}, {3:.3e}, {4:.3e}, {5:.3e}, {6:.2f}".format(D, method.__name__, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time)))
     return x_log, f_log
 
 def exec_simulation(D):
-    methods = [myPSO, myDE]
+    methods = [myPSO, myDE, myFA]
     funcs = [sphere, rastrigin]
     result = {}
     for f in funcs:
@@ -47,10 +49,11 @@ if __name__ == "__main__":
         result = exec_simulation(d)
         for f in ['sphere', 'rastrigin']:
             f_log = []
-            for m in ['myPSO', 'myDE']:
+            label = ['PSO', 'DE', 'FA']
+            for m in ['myPSO', 'myDE', 'myFA']:
                 title = str(d)+f+m
                 x_log = result[f][m]['x_log']
                 makeAnimation(x_log, title)
                 f_log.append(result[f][m]['f_log'])
             title = str(d)+f
-            makeGraph(f_log, title)
+            makeGraph(f_log, title, label)
