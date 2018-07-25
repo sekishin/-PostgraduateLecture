@@ -1,4 +1,4 @@
-EXE = client  server  daemon
+EXE = client  server
 
 all: $(EXE)
 
