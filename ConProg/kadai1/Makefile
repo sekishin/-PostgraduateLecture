@@ -1,6 +1,7 @@
-EXE = client  server
+LOCK: server.c client.c
+	cc -O2 -pipe -DWITH_FLOCK -o server server.c
+	cc -O2 -pipe -o client client.c
 
-all: $(EXE)
-
-clean:
-	rm -f $(EXE) *.o *~
+UNLOCK: server.c client.c
+	cc -O2 -pipe -o server server.c
+	cc -O2 -pipe -o client client.c

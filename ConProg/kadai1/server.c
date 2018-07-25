@@ -11,6 +11,7 @@
 #include <netdb.h>
 #include <sys/file.h>
 
+
 #define SERV_TCP_PORT 20000
 #define RECORD_SIZE 100
 
@@ -103,7 +104,7 @@ int main(int argc, char *argv[])
             fp = open(file_name, O_RDWR | O_CREAT, 0644);  // ファイルオープン
 #ifdef WITH_FLOCK
             if (flock(fp, LOCK_EX) == -1) { // ファイルロック
-                close(fp)
+                close(fp);
                 err_msg("server: can't lock file");
             }
 #endif
