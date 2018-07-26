@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
     }
     ipaddr = *(unsigned int *)(retrieve->h_addr_list[0]);
-    printf("%d.%d.%d.%d (%d) にアクセスします．Ctrl-A を押すと終了します．\n",ipaddr & 0xff, (ipaddr >> 8) & 0xff, (ipaddr >> 16) & 0xff, (ipaddr >> 24) & 0xff,port_no);
+    printf("%d.%d.%d.%d (%d) にアクセスします．\n",ipaddr & 0xff, (ipaddr >> 8) & 0xff, (ipaddr >> 16) & 0xff, (ipaddr >> 24) & 0xff,port_no);
   
     bzero((char *)&serv_addr, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
