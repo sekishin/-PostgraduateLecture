@@ -212,6 +212,6 @@ int main(int argc, char *argv[])
     pthread_join(c_threads[pnum], (void **)&status);
     printf("finish consumer thread %d with return value %d\n", pnum, status);
   }
-
+  release();
   return 0;
 }
