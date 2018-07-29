@@ -7,10 +7,19 @@
 #include <sys/shm.h>
 #include <sys/sem.h>
 #include <sys/wait.h>
+#include <sys/time.h>
 #include <time.h>
 
 #define MAXPROC 100
 #define genrnd(mn, mx) (rand() % ((mx)-(mn)+1) + (mn))
+#define LOOP 100
+
+double gettimeofday_msec()
+{
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return tv.tv_sec * 1000 + tv.tv_usec / 1000;
+}
 
 // ring buffer
 struct ringbuf {
@@ -47,8 +56,9 @@ void V()
 void producer(int prod_No, int pnum)
 {
   int rnd;
-
+#ifdef TIME
   printf("I am producer process.\n");
+#endif
   srand(time(NULL) ^ (prod_No << 8));
   for (; pnum; pnum--) {
     rnd = genrnd(20,80);
@@ -66,7 +76,9 @@ void producer(int prod_No, int pnum)
     rbuf->buf[rbuf->wptr++] = rnd;
     rbuf->wptr %= rbuf->bufsize;
     rbuf->n_item++;
+#ifdef TIME
     printf("P#%02d puts %2d, #item is %3d\n", prod_No, rnd, rbuf->n_item);
+#endif
     fflush(stdout);
     V();
     rnd = genrnd(20,80);
@@ -78,7 +90,9 @@ void consumer(int cons_No, int cnum)
 {
   int rnd;
 
+#ifdef TIME
   printf("I am consuer process.\n");
+#endif
   for (; cnum; cnum--) {
     // pick number from ring buffer
     while (1) {
@@ -94,7 +108,9 @@ void consumer(int cons_No, int cnum)
     rnd = rbuf->buf[rbuf->rptr++];
     rbuf->rptr %= rbuf->bufsize;
     rbuf->n_item--;
+#ifdef TIME
     printf("C#%02d gets %d, #item is %3d\n", cons_No, rnd, rbuf->n_item);
+#endif
     fflush(stdout);
     V();
     usleep(rnd*1000);
@@ -130,6 +146,10 @@ int main(int argc, char *argv[])
   int status;
   int pnum, nid;
   int pmap[MAXPROC], cmap[MAXPROC];
+  clock_t start, end;
+  double t1, t2;
+  time_t x1, x2;
+  int i;
 
   if (argc != 6) {
     fprintf(stderr, "Usage: %s N l L m M\n", argv[0]);
@@ -143,7 +163,9 @@ int main(int argc, char *argv[])
   if (N <= 0 || l*L != m*M) {
     err_msg("Parameter error");
   }
+#ifdef TIME
   printf("N:%d, l:%d, L:%d, m:%d, M:%d\n", N, l, L, m, M);
+#endif
 
   // リングバッファと制御変数の確保
   shmid = shmget(IPC_PRIVATE, sizeof(struct ringbuf) + (N-1)*sizeof(int), IPC_CREAT | 0666);
@@ -171,6 +193,12 @@ int main(int argc, char *argv[])
     exit(1);
   }
 
+  start = clock();
+  time(&x1);
+  t1 = gettimeofday_msec();
+  for (i=0; i<LOOP; i++) {
+  //printf("N:%d, l:%d, L:%d, m:%d, M:%d\n", N, l, L, m, M);
+  //printf("%d\n",i);
   // create consumer
   n_cons = 0;
   while (n_cons < M) {
@@ -185,7 +213,9 @@ int main(int argc, char *argv[])
       release();
       exit(1);
     default:
+#ifdef TIME
        printf("Process id of consumer process %d is %d\n", n_cons, pid);
+#endif
        cmap[n_cons] = pid;
        n_cons++;
      }
@@ -209,7 +239,9 @@ int main(int argc, char *argv[])
       release();
       exit(1);
     default:
+#ifdef TIME
       printf("Process id of producer process %d is %d\n", n_prod, pid);
+#endif
       pmap[n_prod] = pid;
       n_prod++;
     }
@@ -219,20 +251,31 @@ int main(int argc, char *argv[])
     pid = wait(&status);
     for (nid = 0; nid < n_cons; nid++) {
       if (pid == cmap[nid]) {
+#ifdef TIME
         printf("Consumer %d finished at %ld\n", nid, time(NULL));
+#endif
         break;
       }
     }
     if (nid != n_cons) continue;
     for (nid = 0; nid < n_prod; nid++) {
       if (pid == pmap[nid]) {
+#ifdef TIME
         printf("Producer %d finished at %ld\n", nid, time(NULL));
+#endif
         break;
       }
     }
     if (nid != n_prod) continue;
     printf("Illegal process ID %d\n", pid);
   }
+  }
+  t2 = gettimeofday_msec();
+  time(&x2);
+  end = clock();
+  printf("processing time(clock): %.2fms\n", (double)(end-start)/LOOP);
+  printf("processing time(gettimeofday): %.2fms\n", (t2-t1)/LOOP);
+  printf("processing time(time): %.2fms\n", (x2-x1)/LOOP);
   release();
   return 0;
 }

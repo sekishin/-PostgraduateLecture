@@ -1,287 +1,287 @@
 N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
-Process id of consumer process 2 is 55133
-Process id of consumer process 3 is 55134
-Process id of consumer process 4 is 55135
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+Process id of consumer process 2 is 55426
+Process id of consumer process 3 is 55427
+Process id of consumer process 4 is 55428
+Process id of producer process 0 is 55429
+Process id of producer process 1 is 55430
+Process id of producer process 2 is 55431
+Process id of producer process 3 is 55432
 I am producer process.
-P#00 puts 48, #item is   1
-N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
-Process id of consumer process 2 is 55133
-Process id of consumer process 3 is 55134
-Process id of consumer process 4 is 55135
-Process id of producer process 0 is 55136
-Process id of producer process 1 is 55137
-Process id of producer process 2 is 55138
-I am producer process.
-P#03 puts 41, #item is   2
+P#04 puts 71, #item is   1
 N:20, l:20, L:5, m:20, M:5
 I am consuer process.
-C#00 gets 48, #item is   1
+C#00 gets 71, #item is   0
 N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-I am consuer process.
-C#01 gets 41, #item is   0
-N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
-Process id of consumer process 2 is 55133
-Process id of consumer process 3 is 55134
-Process id of consumer process 4 is 55135
-Process id of producer process 0 is 55136
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+Process id of consumer process 2 is 55426
+Process id of consumer process 3 is 55427
+Process id of consumer process 4 is 55428
 I am producer process.
-P#01 puts 66, #item is   1
+P#00 puts 21, #item is   1
 N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
-Process id of consumer process 2 is 55133
-Process id of consumer process 3 is 55134
-Process id of consumer process 4 is 55135
-Process id of producer process 0 is 55136
-Process id of producer process 1 is 55137
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+I am consuer process.
+C#02 gets 21, #item is   0
+N:20, l:20, L:5, m:20, M:5
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+Process id of consumer process 2 is 55426
+Process id of consumer process 3 is 55427
+Process id of consumer process 4 is 55428
+Process id of producer process 0 is 55429
+Process id of producer process 1 is 55430
+Process id of producer process 2 is 55431
 I am producer process.
-P#02 puts 23, #item is   2
+P#03 puts 39, #item is   1
 N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
-Process id of consumer process 2 is 55133
-Process id of consumer process 3 is 55134
+Process id of consumer process 0 is 55424
 I am consuer process.
-C#04 gets 66, #item is   1
+C#01 gets 39, #item is   0
+P#04 puts 72, #item is   1
 N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
-Process id of consumer process 2 is 55133
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+Process id of consumer process 2 is 55426
 I am consuer process.
-C#03 gets 23, #item is   0
+C#03 gets 72, #item is   0
 N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
-Process id of consumer process 2 is 55133
-Process id of consumer process 3 is 55134
-Process id of consumer process 4 is 55135
-Process id of producer process 0 is 55136
-Process id of producer process 1 is 55137
-Process id of producer process 2 is 55138
-Process id of producer process 3 is 55139
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+Process id of consumer process 2 is 55426
+Process id of consumer process 3 is 55427
+Process id of consumer process 4 is 55428
+Process id of producer process 0 is 55429
+Process id of producer process 1 is 55430
 I am producer process.
-P#04 puts 37, #item is   1
+P#02 puts 57, #item is   1
 N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+Process id of consumer process 2 is 55426
+Process id of consumer process 3 is 55427
 I am consuer process.
-C#02 gets 37, #item is   0
-P#00 puts 56, #item is   1
-C#03 gets 56, #item is   0
-P#01 puts 51, #item is   1
-C#00 gets 51, #item is   0
-P#02 puts 46, #item is   1
-C#02 gets 46, #item is   0
-P#03 puts 44, #item is   1
-C#04 gets 44, #item is   0
-P#02 puts 37, #item is   1
-C#02 gets 37, #item is   0
-P#04 puts 70, #item is   1
-P#01 puts 45, #item is   2
-C#00 gets 70, #item is   1
-C#01 gets 45, #item is   0
-P#00 puts 53, #item is   1
-C#03 gets 53, #item is   0
-P#03 puts 32, #item is   1
-C#04 gets 32, #item is   0
-P#04 puts 79, #item is   1
-C#02 gets 79, #item is   0
-P#02 puts 65, #item is   1
-C#04 gets 65, #item is   0
-P#03 puts 37, #item is   1
-C#01 gets 37, #item is   0
-P#01 puts 32, #item is   1
-C#03 gets 32, #item is   0
-P#04 puts 50, #item is   1
-P#00 puts 60, #item is   2
-C#00 gets 50, #item is   1
-C#01 gets 60, #item is   0
-P#02 puts 24, #item is   1
-C#02 gets 24, #item is   0
-P#01 puts 41, #item is   1
+C#04 gets 57, #item is   0
+N:20, l:20, L:5, m:20, M:5
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+Process id of consumer process 2 is 55426
+Process id of consumer process 3 is 55427
+Process id of consumer process 4 is 55428
+Process id of producer process 0 is 55429
+I am producer process.
+P#01 puts 64, #item is   1
+C#00 gets 64, #item is   0
+P#00 puts 55, #item is   1
+P#03 puts 53, #item is   2
+C#02 gets 55, #item is   1
+P#02 puts 48, #item is   2
+C#01 gets 53, #item is   1
+P#04 puts 64, #item is   2
+C#04 gets 48, #item is   1
+C#00 gets 64, #item is   0
+P#01 puts 60, #item is   1
+C#02 gets 60, #item is   0
+P#04 puts 63, #item is   1
+C#03 gets 63, #item is   0
+P#03 puts 30, #item is   1
+C#01 gets 30, #item is   0
+P#02 puts 22, #item is   1
+C#04 gets 22, #item is   0
+P#00 puts 35, #item is   1
+P#01 puts 43, #item is   2
+P#04 puts 28, #item is   3
+C#04 gets 35, #item is   2
+C#01 gets 43, #item is   1
+P#01 puts 43, #item is   2
+C#00 gets 28, #item is   1
+C#02 gets 43, #item is   0
+P#02 puts 20, #item is   1
+C#04 gets 20, #item is   0
+P#00 puts 76, #item is   1
+P#03 puts 48, #item is   2
+C#00 gets 76, #item is   1
+C#01 gets 48, #item is   0
+P#04 puts 41, #item is   1
 C#03 gets 41, #item is   0
-P#00 puts 58, #item is   1
-P#04 puts 68, #item is   2
-C#00 gets 58, #item is   1
-C#04 gets 68, #item is   0
-P#03 puts 68, #item is   1
-P#02 puts 39, #item is   2
-C#02 gets 68, #item is   1
-P#04 puts 21, #item is   2
-C#01 gets 39, #item is   1
-C#03 gets 21, #item is   0
-P#03 puts 75, #item is   1
-P#00 puts 34, #item is   2
-P#01 puts 67, #item is   3
-C#03 gets 75, #item is   2
-C#00 gets 34, #item is   1
-C#01 gets 67, #item is   0
-P#04 puts 36, #item is   1
-C#04 gets 36, #item is   0
-P#02 puts 51, #item is   1
-C#02 gets 51, #item is   0
-P#00 puts 45, #item is   1
-C#00 gets 45, #item is   0
-P#01 puts 48, #item is   1
-C#04 gets 48, #item is   0
-P#03 puts 51, #item is   1
-C#03 gets 51, #item is   0
-P#04 puts 80, #item is   1
-C#00 gets 80, #item is   0
-P#03 puts 26, #item is   1
-C#02 gets 26, #item is   0
+P#01 puts 35, #item is   1
+C#02 gets 35, #item is   0
+P#02 puts 45, #item is   1
+C#04 gets 45, #item is   0
+P#03 puts 62, #item is   1
+C#03 gets 62, #item is   0
 P#02 puts 59, #item is   1
-C#01 gets 59, #item is   0
-P#04 puts 58, #item is   1
-C#04 gets 58, #item is   0
-P#00 puts 67, #item is   1
-C#02 gets 67, #item is   0
+P#03 puts 26, #item is   2
+C#02 gets 59, #item is   1
+C#01 gets 26, #item is   0
+P#01 puts 21, #item is   1
+C#04 gets 21, #item is   0
+P#04 puts 60, #item is   1
+P#02 puts 72, #item is   2
+P#00 puts 79, #item is   3
+C#00 gets 60, #item is   2
+C#01 gets 72, #item is   1
+C#04 gets 79, #item is   0
+P#01 puts 66, #item is   1
+C#03 gets 66, #item is   0
+P#04 puts 24, #item is   1
+C#02 gets 24, #item is   0
 P#03 puts 69, #item is   1
-P#01 puts 34, #item is   2
-C#03 gets 69, #item is   1
-P#00 puts 66, #item is   2
-P#03 puts 52, #item is   3
-C#01 gets 34, #item is   2
-C#00 gets 66, #item is   1
-C#04 gets 52, #item is   0
-P#04 puts 21, #item is   1
 P#02 puts 67, #item is   2
-P#01 puts 65, #item is   3
-C#02 gets 21, #item is   2
-P#03 puts 77, #item is   3
-C#01 gets 67, #item is   2
-C#03 gets 65, #item is   1
-P#04 puts 55, #item is   2
-C#02 gets 77, #item is   1
-P#00 puts 37, #item is   2
-P#01 puts 41, #item is   3
-P#03 puts 64, #item is   4
-C#04 gets 55, #item is   3
-C#00 gets 37, #item is   2
-P#04 puts 44, #item is   3
-P#00 puts 78, #item is   4
-P#02 puts 48, #item is   5
-C#03 gets 41, #item is   4
-C#01 gets 64, #item is   3
-P#03 puts 23, #item is   4
-P#04 puts 38, #item is   5
-C#00 gets 44, #item is   4
-C#04 gets 78, #item is   3
-C#02 gets 48, #item is   2
-P#01 puts 38, #item is   3
-P#02 puts 56, #item is   4
-P#00 puts 21, #item is   5
-P#04 puts 53, #item is   6
-C#03 gets 23, #item is   5
-P#03 puts 66, #item is   6
-C#00 gets 38, #item is   5
-C#03 gets 38, #item is   4
-C#01 gets 56, #item is   3
-C#02 gets 21, #item is   2
-P#02 puts 72, #item is   3
-P#01 puts 77, #item is   4
-P#04 puts 71, #item is   5
-C#02 gets 53, #item is   4
-C#04 gets 66, #item is   3
-C#00 gets 72, #item is   2
-P#00 puts 56, #item is   3
-C#03 gets 77, #item is   2
-P#03 puts 47, #item is   3
-C#01 gets 71, #item is   2
-P#02 puts 33, #item is   3
-P#01 puts 43, #item is   4
-C#02 gets 56, #item is   3
-P#04 puts 53, #item is   4
-P#03 puts 75, #item is   5
-P#00 puts 77, #item is   6
-C#04 gets 47, #item is   5
-P#01 puts 51, #item is   6
-C#00 gets 33, #item is   5
-P#03 puts 31, #item is   6
-C#03 gets 43, #item is   5
-P#00 puts 32, #item is   6
-P#02 puts 28, #item is   7
-C#01 gets 53, #item is   6
-C#02 gets 75, #item is   5
-C#00 gets 77, #item is   4
-P#01 puts 36, #item is   5
-P#04 puts 41, #item is   6
-C#04 gets 51, #item is   5
-C#03 gets 31, #item is   4
-P#03 puts 69, #item is   5
-P#00 puts 22, #item is   6
-P#02 puts 43, #item is   7
-P#01 puts 60, #item is   8
-C#01 gets 32, #item is   7
-P#03 puts 55, #item is   8
-C#03 gets 28, #item is   7
-C#04 gets 36, #item is   6
-P#04 puts 23, #item is   7
-C#02 gets 41, #item is   6
-C#01 gets 69, #item is   5
-C#00 gets 22, #item is   4
-P#02 puts 37, #item is   5
-C#03 gets 43, #item is   4
-P#00 puts 51, #item is   5
-P#01 puts 26, #item is   6
-C#04 gets 60, #item is   5
-C#00 gets 55, #item is   4
-P#04 puts 39, #item is   5
-C#02 gets 23, #item is   4
-P#01 puts 38, #item is   5
-P#02 puts 59, #item is   6
-C#03 gets 37, #item is   5
-P#03 puts 72, #item is   6
-P#00 puts 24, #item is   7
-C#02 gets 51, #item is   6
-P#01 puts 67, #item is   7
-C#01 gets 26, #item is   6
-C#00 gets 39, #item is   5
-C#04 gets 38, #item is   4
-C#03 gets 59, #item is   3
+C#00 gets 69, #item is   1
+C#02 gets 67, #item is   0
+P#00 puts 54, #item is   1
+C#01 gets 54, #item is   0
+P#01 puts 47, #item is   1
+C#04 gets 47, #item is   0
+P#04 puts 66, #item is   1
+C#03 gets 66, #item is   0
+P#03 puts 39, #item is   1
+P#02 puts 75, #item is   2
+P#00 puts 69, #item is   3
+P#03 puts 73, #item is   4
+C#00 gets 39, #item is   3
+C#04 gets 75, #item is   2
+C#02 gets 69, #item is   1
+C#01 gets 73, #item is   0
+P#01 puts 69, #item is   1
+P#04 puts 54, #item is   2
+C#03 gets 69, #item is   1
+P#01 puts 66, #item is   2
+P#03 puts 74, #item is   3
+P#02 puts 20, #item is   4
+C#00 gets 54, #item is   3
+P#00 puts 72, #item is   4
+P#02 puts 73, #item is   5
+C#02 gets 66, #item is   4
+C#01 gets 74, #item is   3
+C#04 gets 20, #item is   2
+P#03 puts 52, #item is   3
 P#04 puts 72, #item is   4
-C#01 gets 72, #item is   3
-P#02 puts 55, #item is   4
-P#00 puts 73, #item is   5
-C#02 gets 24, #item is   4
-C#00 gets 67, #item is   3
-C#04 gets 72, #item is   2
-P#01 puts 79, #item is   3
-P#02 puts 61, #item is   4
-C#01 gets 55, #item is   3
-P#00 puts 55, #item is   4
-C#00 gets 73, #item is   3
-C#04 gets 79, #item is   2
-C#01 gets 61, #item is   1
-P#02 puts 45, #item is   2
-C#04 gets 55, #item is   1
-C#01 gets 45, #item is   0
+C#00 gets 72, #item is   3
+C#04 gets 73, #item is   2
+P#02 puts 46, #item is   3
+C#03 gets 52, #item is   2
+P#01 puts 74, #item is   3
+P#04 puts 79, #item is   4
+P#00 puts 71, #item is   5
+P#03 puts 51, #item is   6
+C#02 gets 72, #item is   5
+P#03 puts 25, #item is   6
+C#01 gets 46, #item is   5
+C#03 gets 74, #item is   4
+C#00 gets 79, #item is   3
+P#04 puts 20, #item is   4
+P#01 puts 61, #item is   5
+C#04 gets 71, #item is   4
+P#02 puts 76, #item is   5
+P#00 puts 70, #item is   6
+C#01 gets 51, #item is   5
+P#01 puts 48, #item is   6
+P#03 puts 61, #item is   7
+P#02 puts 35, #item is   8
+C#02 gets 25, #item is   7
+P#04 puts 60, #item is   8
+C#03 gets 20, #item is   7
+C#02 gets 61, #item is   6
+P#00 puts 31, #item is   7
+C#04 gets 76, #item is   6
+C#00 gets 70, #item is   5
+C#01 gets 48, #item is   4
+P#01 puts 49, #item is   5
+C#03 gets 61, #item is   4
+P#03 puts 74, #item is   5
+P#02 puts 78, #item is   6
+P#04 puts 45, #item is   7
+P#01 puts 63, #item is   8
+P#00 puts 56, #item is   9
+C#01 gets 35, #item is   8
+C#02 gets 60, #item is   7
+C#00 gets 31, #item is   6
+C#03 gets 49, #item is   5
+P#03 puts 35, #item is   6
+P#00 puts 38, #item is   7
+C#04 gets 74, #item is   6
+P#02 puts 73, #item is   7
+C#01 gets 78, #item is   6
+P#03 puts 76, #item is   7
+P#00 puts 23, #item is   8
+C#00 gets 45, #item is   7
+P#01 puts 20, #item is   8
+P#04 puts 28, #item is   9
+C#02 gets 63, #item is   8
+P#03 puts 35, #item is   9
+C#03 gets 56, #item is   8
+P#00 puts 67, #item is   9
+P#03 puts 70, #item is  10
+C#00 gets 35, #item is   9
+P#04 puts 30, #item is  10
+C#04 gets 38, #item is   9
+P#02 puts 48, #item is  10
+P#01 puts 71, #item is  11
+C#01 gets 73, #item is  10
+C#03 gets 76, #item is   9
+C#00 gets 23, #item is   8
+C#02 gets 20, #item is   7
+C#04 gets 28, #item is   6
+P#00 puts 58, #item is   7
+C#02 gets 35, #item is   6
+C#00 gets 67, #item is   5
+P#03 puts 54, #item is   6
+P#04 puts 78, #item is   7
+P#02 puts 49, #item is   8
+C#04 gets 70, #item is   7
+P#01 puts 65, #item is   8
+P#00 puts 43, #item is   9
+C#01 gets 30, #item is   8
+C#02 gets 48, #item is   7
+P#01 puts 21, #item is   8
+C#03 gets 71, #item is   7
+P#04 puts 39, #item is   8
+C#01 gets 58, #item is   7
+P#02 puts 64, #item is   8
+C#00 gets 54, #item is   7
+P#00 puts 79, #item is   8
+C#02 gets 78, #item is   7
+C#04 gets 49, #item is   6
+P#01 puts 61, #item is   7
+P#04 puts 44, #item is   8
+C#01 gets 65, #item is   7
+C#00 gets 43, #item is   6
+C#03 gets 21, #item is   5
+C#04 gets 39, #item is   4
+P#02 puts 20, #item is   5
+P#00 puts 76, #item is   6
+C#03 gets 64, #item is   5
+C#02 gets 79, #item is   4
+C#00 gets 61, #item is   3
+C#01 gets 44, #item is   2
+P#00 puts 27, #item is   3
+C#03 gets 20, #item is   2
+C#03 gets 76, #item is   1
+C#03 gets 27, #item is   0
 N:20, l:20, L:5, m:20, M:5
-Process id of consumer process 0 is 55131
-Process id of consumer process 1 is 55132
-Process id of consumer process 2 is 55133
-Process id of consumer process 3 is 55134
-Process id of consumer process 4 is 55135
-Process id of producer process 0 is 55136
-Process id of producer process 1 is 55137
-Process id of producer process 2 is 55138
-Process id of producer process 3 is 55139
-Process id of producer process 4 is 55140
-Producer 3 finished at 1532857390
-Producer 4 finished at 1532857390
-Consumer 2 finished at 1532857390
-Consumer 3 finished at 1532857390
-Producer 1 finished at 1532857390
-Producer 0 finished at 1532857390
-Producer 2 finished at 1532857390
-Consumer 0 finished at 1532857390
-Consumer 4 finished at 1532857390
-Consumer 1 finished at 1532857390
+Process id of consumer process 0 is 55424
+Process id of consumer process 1 is 55425
+Process id of consumer process 2 is 55426
+Process id of consumer process 3 is 55427
+Process id of consumer process 4 is 55428
+Process id of producer process 0 is 55429
+Process id of producer process 1 is 55430
+Process id of producer process 2 is 55431
+Process id of producer process 3 is 55432
+Process id of producer process 4 is 55433
+Producer 3 finished at 1532857677
+Producer 4 finished at 1532857677
+Producer 1 finished at 1532857677
+Consumer 4 finished at 1532857677
+Producer 2 finished at 1532857677
+Consumer 0 finished at 1532857677
+Consumer 1 finished at 1532857677
+Producer 0 finished at 1532857677
+Consumer 2 finished at 1532857677
+Consumer 3 finished at 1532857677
 processing time: 0.00ms

@@ -1,8 +1,6 @@
-CFLAGS = -O2
-EXEC = ProdCons CorrectData
+all: ProdCons.c CorrectData.c
+	gcc -o ProdCons ProdCons.c
+	gcc -o CorrectData CorrectData.c
 
-
-all: $(EXEC)
-
-clean:
-	rm -f $(EXEC)  *.o *.s *~
+calc_time: ProdCons.c
+	gcc -o ProdCons -DTIME ProdCons.c
