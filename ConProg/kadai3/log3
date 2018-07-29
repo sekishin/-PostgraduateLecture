@@ -1,0 +1,279 @@
+N:20, l:5, L:20, m:20, M:5
+Thread id of consumer 0 
+I am consuer process.
+Thread id of consumer 1 
+I am consuer process.
+Thread id of consumer 2 
+I am consuer process.
+Thread id of consumer 3 
+I am consuer process.
+Thread id of consumer 4 
+I am consuer process.
+Thread id of producer 0 
+I am producer process.
+Thread id of producer 1 
+I am producer process.
+Thread id of producer 2 
+I am producer process.
+Thread id of producer 3 
+P#01 puts 38, #item is   1
+I am producer process.
+P#02 puts 45, #item is   2
+C#02 gets 38, #item is   1
+P#03 puts 63, #item is   2
+C#00 gets 45, #item is   1
+I am producer process.
+Thread id of producer 4 
+P#00 puts 20, #item is   2
+P#04 puts 31, #item is   3
+C#01 gets 63, #item is   2
+C#04 gets 20, #item is   1
+C#03 gets 31, #item is   0
+I am producer process.
+Thread id of producer 5 
+P#05 puts 49, #item is   1
+Thread id of producer 6 
+I am producer process.
+P#06 puts 56, #item is   2
+I am producer process.
+P#07 puts 74, #item is   3
+Thread id of producer 7 
+I am producer process.
+Thread id of producer 8 
+P#08 puts 59, #item is   4
+Thread id of producer 9 
+I am producer process.
+P#09 puts 77, #item is   5
+Thread id of producer 10 
+I am producer process.
+P#10 puts 23, #item is   6
+Thread id of producer 11 
+I am producer process.
+P#11 puts 41, #item is   7
+Thread id of producer 12 
+I am producer process.
+P#12 puts 70, #item is   8
+I am producer process.
+Thread id of producer 13 
+P#13 puts 27, #item is   9
+Thread id of producer 14 
+I am producer process.
+P#14 puts 34, #item is  10
+Thread id of producer 15 
+I am producer process.
+P#15 puts 52, #item is  11
+Thread id of producer 16 
+I am producer process.
+P#16 puts 37, #item is  12
+Thread id of producer 17 
+I am producer process.
+P#17 puts 55, #item is  13
+Thread id of producer 18 
+I am producer process.
+P#18 puts 62, #item is  14
+Thread id of producer 19 
+I am producer process.
+P#19 puts 80, #item is  15
+C#04 gets 49, #item is  14
+P#09 puts 55, #item is  15
+P#18 puts 71, #item is  16
+P#07 puts 45, #item is  17
+P#00 puts 53, #item is  18
+P#19 puts 38, #item is  19
+C#03 gets 56, #item is  18
+P#03 puts 62, #item is  19
+P#16 puts 68, #item is  20
+C#02 gets 74, #item is  19
+P#15 puts 64, #item is  20
+C#00 gets 59, #item is  19
+P#14 puts 55, #item is  20
+C#04 gets 77, #item is  19
+P#01 puts 78, #item is  20
+C#01 gets 23, #item is  19
+P#16 puts 51, #item is  20
+C#03 gets 41, #item is  19
+P#08 puts 55, #item is  20
+C#00 gets 70, #item is  19
+P#19 puts 66, #item is  20
+C#01 gets 27, #item is  19
+P#13 puts 55, #item is  20
+C#02 gets 34, #item is  19
+P#00 puts 62, #item is  20
+C#01 gets 52, #item is  19
+P#12 puts 63, #item is  20
+C#03 gets 37, #item is  19
+P#09 puts 52, #item is  20
+C#02 gets 55, #item is  19
+P#10 puts 73, #item is  20
+C#04 gets 62, #item is  19
+P#01 puts 50, #item is  20
+C#03 gets 80, #item is  19
+P#06 puts 60, #item is  20
+C#00 gets 55, #item is  19
+P#09 puts 57, #item is  20
+C#01 gets 71, #item is  19
+P#18 puts 27, #item is  20
+C#02 gets 45, #item is  19
+P#13 puts 67, #item is  20
+C#04 gets 53, #item is  19
+P#15 puts 37, #item is  20
+C#00 gets 38, #item is  19
+P#14 puts 63, #item is  20
+C#02 gets 62, #item is  19
+P#19 puts 67, #item is  20
+C#03 gets 68, #item is  19
+P#18 puts 29, #item is  20
+C#01 gets 64, #item is  19
+P#16 puts 57, #item is  20
+C#04 gets 55, #item is  19
+P#06 puts 35, #item is  20
+C#00 gets 78, #item is  19
+P#08 puts 51, #item is  20
+C#02 gets 51, #item is  19
+P#02 puts 54, #item is  20
+C#01 gets 55, #item is  19
+P#15 puts 26, #item is  20
+C#03 gets 66, #item is  19
+P#19 puts 30, #item is  20
+C#04 gets 55, #item is  19
+P#11 puts 80, #item is  20
+C#00 gets 62, #item is  19
+P#04 puts 52, #item is  20
+C#02 gets 63, #item is  19
+P#01 puts 64, #item is  20
+C#01 gets 52, #item is  19
+P#12 puts 39, #item is  20
+C#04 gets 73, #item is  19
+P#14 puts 65, #item is  20
+C#03 gets 50, #item is  19
+P#09 puts 50, #item is  20
+C#00 gets 60, #item is  19
+P#10 puts 43, #item is  20
+C#01 gets 57, #item is  19
+P#01 puts 64, #item is  20
+C#02 gets 27, #item is  19
+P#03 puts 78, #item is  20
+C#03 gets 67, #item is  19
+P#12 puts 80, #item is  20
+C#04 gets 37, #item is  19
+P#14 puts 47, #item is  20
+C#02 gets 63, #item is  19
+P#15 puts 78, #item is  20
+C#00 gets 67, #item is  19
+P#17 puts 22, #item is  20
+C#01 gets 29, #item is  19
+P#02 puts 20, #item is  20
+C#04 gets 57, #item is  19
+P#05 puts 51, #item is  20
+C#03 gets 35, #item is  19
+P#13 puts 64, #item is  20
+C#01 gets 51, #item is  19
+P#03 puts 54, #item is  20
+C#02 gets 54, #item is  19
+P#07 puts 58, #item is  20
+C#00 gets 26, #item is  19
+P#00 puts 70, #item is  20
+C#03 gets 30, #item is  19
+P#18 puts 74, #item is  20
+C#04 gets 80, #item is  19
+P#10 puts 57, #item is  20
+C#00 gets 52, #item is  19
+P#17 puts 47, #item is  20
+C#01 gets 64, #item is  19
+P#02 puts 27, #item is  20
+C#03 gets 39, #item is  19
+P#04 puts 60, #item is  20
+C#02 gets 65, #item is  19
+P#12 puts 61, #item is  20
+C#03 gets 50, #item is  19
+C#00 gets 43, #item is  18
+P#17 puts 24, #item is  19
+P#00 puts 73, #item is  20
+C#04 gets 64, #item is  19
+P#11 puts 63, #item is  20
+C#01 gets 78, #item is  19
+P#08 puts 74, #item is  20
+C#02 gets 80, #item is  19
+P#07 puts 69, #item is  20
+C#00 gets 47, #item is  19
+P#05 puts 30, #item is  20
+C#03 gets 78, #item is  19
+P#16 puts 53, #item is  20
+finish producer thread 0 with return value 0
+finish producer thread 1 with return value 0
+C#04 gets 22, #item is  19
+P#13 puts 76, #item is  20
+C#00 gets 20, #item is  19
+P#06 puts 33, #item is  20
+C#01 gets 51, #item is  19
+P#08 puts 28, #item is  20
+C#04 gets 64, #item is  19
+P#07 puts 44, #item is  20
+C#02 gets 54, #item is  19
+P#10 puts 49, #item is  20
+C#00 gets 58, #item is  19
+P#02 puts 76, #item is  20
+C#03 gets 70, #item is  19
+P#03 puts 66, #item is  20
+C#01 gets 74, #item is  19
+P#17 puts 49, #item is  20
+finish producer thread 2 with return value 0
+C#04 gets 57, #item is  19
+P#04 puts 24, #item is  20
+C#02 gets 47, #item is  19
+P#05 puts 52, #item is  20
+C#00 gets 27, #item is  19
+P#11 puts 28, #item is  20
+finish producer thread 3 with return value 0
+C#03 gets 60, #item is  19
+P#06 puts 74, #item is  20
+C#00 gets 61, #item is  19
+P#11 puts 52, #item is  20
+C#02 gets 24, #item is  19
+P#04 puts 40, #item is  20
+C#01 gets 73, #item is  19
+C#04 gets 63, #item is  18
+C#02 gets 74, #item is  17
+P#05 puts 65, #item is  18
+C#03 gets 69, #item is  17
+C#00 gets 30, #item is  16
+finish producer thread 4 with return value 0
+finish producer thread 5 with return value 0
+finish producer thread 6 with return value 0
+finish producer thread 7 with return value 0
+finish producer thread 8 with return value 0
+finish producer thread 9 with return value 0
+finish producer thread 10 with return value 0
+finish producer thread 11 with return value 0
+finish producer thread 12 with return value 0
+finish producer thread 13 with return value 0
+finish producer thread 14 with return value 0
+finish producer thread 15 with return value 0
+finish producer thread 16 with return value 0
+finish producer thread 17 with return value 0
+finish producer thread 18 with return value 0
+finish producer thread 19 with return value 0
+C#04 gets 53, #item is  15
+C#01 gets 76, #item is  14
+C#00 gets 33, #item is  13
+C#02 gets 28, #item is  12
+C#00 gets 44, #item is  11
+C#03 gets 49, #item is  10
+C#04 gets 76, #item is   9
+C#02 gets 66, #item is   8
+C#01 gets 49, #item is   7
+finish consumer thread 0 with return value 0
+C#03 gets 24, #item is   6
+C#03 gets 52, #item is   5
+C#02 gets 28, #item is   4
+C#04 gets 74, #item is   3
+C#01 gets 52, #item is   2
+C#01 gets 40, #item is   1
+C#04 gets 65, #item is   0
+finish consumer thread 1 with return value 0
+finish consumer thread 2 with return value 0
+finish consumer thread 3 with return value 0
+finish consumer thread 4 with return value 0
+processing time(clock): 1.39ms
+processing time(gettimeofday): 12.08ms
+processing time(time): 12.08ms

@@ -6,7 +6,7 @@
 #include <sys/time.h>
 
 #define SIZE 256	// 正方行列の最大サイズ
-#define THNUM 64	// 生成するスレッドの最大数
+#define THNUM 100	// 生成するスレッドの最大数
 #define LOOP 1000	// 時間計測で繰り返す回数
 
 int A[SIZE][SIZE], B[SIZE][SIZE], C[SIZE][SIZE];	// 行列

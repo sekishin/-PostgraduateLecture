@@ -214,7 +214,7 @@ int main(int argc, char *argv[])
   start = clock();
   time(&x1);
   t1 = gettimeofday_msec();
-  for (i=0; i<LOOP; i++) {
+  //for (i=0; i<LOOP; i++) {
   //printf("N:%d, l:%d, L:%d, m:%d, M:%d\n", N, l, L, m, M);
   //printf("%d\n",i);
   // create consumer
@@ -253,7 +253,7 @@ int main(int argc, char *argv[])
     printf("finish consumer thread %d with return value %d\n", pnum, status);
 #endif
   }
-  }
+  //}
   t2 = gettimeofday_msec();
   time(&x2);
   end = clock();
