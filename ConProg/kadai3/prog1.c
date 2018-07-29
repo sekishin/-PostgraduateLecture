@@ -11,6 +11,13 @@
 
 int A[SIZE][SIZE], B[SIZE][SIZE], C[SIZE][SIZE];	// 行列
 
+double gettimeofday_msec()
+{
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return tv.tv_sec * 1000 + tv.tv_usec / 1000;
+}
+
 typedef struct {
 /* Cのどの要素を計算するかを格納するための構造体 */
 	int row;	// Cの行
@@ -76,8 +83,8 @@ int main(int argc, char **argv)
 	Parts ps[THNUM];
 	int num;
 	int t;
-	struct timeval start, end;
-	time_t s, e;
+	double start, end;
+	clock_t s, e;
 
 	/* 引数処理 */
 	if (argc < 3) error("Usage: execute_file_name matrix_size thread_size");
@@ -105,8 +112,8 @@ int main(int argc, char **argv)
 #endif
 	
 	/* スレッド生成 */
-	gettimeofday(&start, NULL);
-	time(&s);
+	start = gettimeofday_msec();
+	s = clock();
 	for (t = 0; t < LOOP; t++) {
 		for (num = 0; num < thnum; num++) {
 			pthread_create(&threads[num], NULL, (void *)calc_matrix, &ps[num]);
@@ -118,8 +125,8 @@ int main(int argc, char **argv)
 #endif
 		}
 	}
-	time(&e);
-	gettimeofday(&end, NULL);
+	e = clock();
+	end = gettimeofday_msec();
 #ifdef DEBUG
 	puts("matrix C");
 	for (i = 0; i < n; i++) {
@@ -129,9 +136,6 @@ int main(int argc, char **argv)
 		puts("");
 	}
 #endif
-	double time = (double)(end.tv_sec*1000000+end.tv_usec) - (start.tv_sec*1000000+start.tv_usec);
-	time /= LOOP;
-	printf("実時間(ms): %.3f\n", (double)(e-s)/LOOP);
-	printf("処理時間(ms): %.4f\n", time/1000);
+	printf("%.2f, %.2f\n", (double)(end-start)/LOOP, (double)(e-s)/LOOP);
 	return 0;
 }
