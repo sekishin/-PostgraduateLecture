@@ -1,5 +1,5 @@
 CFLAGS = -O2
-EXEC = ProdCons
+EXEC = ProdCons CorrectData
 
 
 all: $(EXEC)
