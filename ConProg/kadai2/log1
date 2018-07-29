@@ -1,0 +1,186 @@
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+Process id of consumer process 2 is 50855
+Process id of consumer process 3 is 50856
+Process id of consumer process 4 is 50857
+I am producer process.
+P#00 puts 74, #item is   1
+N:20, l:10, L:5, m:10, M:5
+I am consuer process.
+C#00 gets 74, #item is   0
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+Process id of consumer process 2 is 50855
+Process id of consumer process 3 is 50856
+Process id of consumer process 4 is 50857
+Process id of producer process 0 is 50858
+Process id of producer process 1 is 50859
+Process id of producer process 2 is 50860
+Process id of producer process 3 is 50861
+I am producer process.
+P#04 puts 63, #item is   1
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+Process id of consumer process 2 is 50855
+Process id of consumer process 3 is 50856
+Process id of consumer process 4 is 50857
+Process id of producer process 0 is 50858
+Process id of producer process 1 is 50859
+I am producer process.
+P#02 puts 38, #item is   2
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+I am consuer process.
+C#02 gets 63, #item is   1
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+I am consuer process.
+C#01 gets 38, #item is   0
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+Process id of consumer process 2 is 50855
+Process id of consumer process 3 is 50856
+Process id of consumer process 4 is 50857
+Process id of producer process 0 is 50858
+I am producer process.
+P#01 puts 31, #item is   1
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+Process id of consumer process 2 is 50855
+Process id of consumer process 3 is 50856
+Process id of consumer process 4 is 50857
+Process id of producer process 0 is 50858
+Process id of producer process 1 is 50859
+Process id of producer process 2 is 50860
+I am producer process.
+P#03 puts 56, #item is   2
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+Process id of consumer process 2 is 50855
+I am consuer process.
+C#03 gets 31, #item is   1
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+Process id of consumer process 2 is 50855
+Process id of consumer process 3 is 50856
+I am consuer process.
+C#04 gets 56, #item is   0
+P#04 puts 53, #item is   1
+C#01 gets 53, #item is   0
+P#02 puts 46, #item is   1
+C#02 gets 46, #item is   0
+P#03 puts 41, #item is   1
+C#03 gets 41, #item is   0
+P#00 puts 39, #item is   1
+C#04 gets 39, #item is   0
+P#01 puts 34, #item is   1
+P#04 puts 52, #item is   2
+C#00 gets 34, #item is   1
+P#03 puts 34, #item is   2
+P#02 puts 39, #item is   3
+C#01 gets 52, #item is   2
+C#03 gets 34, #item is   1
+C#02 gets 39, #item is   0
+P#03 puts 44, #item is   1
+P#02 puts 72, #item is   2
+P#04 puts 67, #item is   3
+C#04 gets 44, #item is   2
+C#00 gets 72, #item is   1
+C#03 gets 67, #item is   0
+P#01 puts 79, #item is   1
+C#02 gets 79, #item is   0
+P#00 puts 26, #item is   1
+C#01 gets 26, #item is   0
+P#02 puts 24, #item is   1
+C#04 gets 24, #item is   0
+P#03 puts 68, #item is   1
+C#04 gets 68, #item is   0
+P#04 puts 58, #item is   1
+C#03 gets 58, #item is   0
+P#01 puts 49, #item is   1
+C#00 gets 49, #item is   0
+P#00 puts 77, #item is   1
+C#01 gets 77, #item is   0
+P#02 puts 22, #item is   1
+C#02 gets 22, #item is   0
+P#03 puts 58, #item is   1
+P#04 puts 78, #item is   2
+C#00 gets 58, #item is   1
+C#04 gets 78, #item is   0
+P#00 puts 51, #item is   1
+C#02 gets 51, #item is   0
+P#04 puts 44, #item is   1
+C#03 gets 44, #item is   0
+P#01 puts 34, #item is   1
+P#02 puts 50, #item is   2
+C#01 gets 34, #item is   1
+P#03 puts 53, #item is   2
+P#04 puts 68, #item is   3
+C#00 gets 50, #item is   2
+C#03 gets 53, #item is   1
+P#02 puts 60, #item is   2
+C#04 gets 68, #item is   1
+C#01 gets 60, #item is   0
+P#00 puts 30, #item is   1
+C#02 gets 30, #item is   0
+P#04 puts 76, #item is   1
+P#03 puts 27, #item is   2
+P#01 puts 63, #item is   3
+C#00 gets 76, #item is   2
+P#00 puts 53, #item is   3
+P#03 puts 79, #item is   4
+C#02 gets 27, #item is   3
+C#03 gets 63, #item is   2
+C#01 gets 53, #item is   1
+P#02 puts 80, #item is   2
+C#02 gets 79, #item is   1
+P#00 puts 55, #item is   2
+P#01 puts 56, #item is   3
+C#04 gets 80, #item is   2
+P#03 puts 21, #item is   3
+P#04 puts 70, #item is   4
+C#00 gets 55, #item is   3
+P#01 puts 80, #item is   4
+P#00 puts 20, #item is   5
+C#01 gets 56, #item is   4
+C#03 gets 21, #item is   3
+P#02 puts 78, #item is   4
+C#03 gets 70, #item is   3
+C#02 gets 80, #item is   2
+C#04 gets 20, #item is   1
+C#00 gets 78, #item is   0
+P#01 puts 22, #item is   1
+C#04 gets 22, #item is   0
+P#00 puts 25, #item is   1
+C#01 gets 25, #item is   0
+P#01 puts 29, #item is   1
+C#00 gets 29, #item is   0
+N:20, l:10, L:5, m:10, M:5
+Process id of consumer process 0 is 50853
+Process id of consumer process 1 is 50854
+Process id of consumer process 2 is 50855
+Process id of consumer process 3 is 50856
+Process id of consumer process 4 is 50857
+Process id of producer process 0 is 50858
+Process id of producer process 1 is 50859
+Process id of producer process 2 is 50860
+Process id of producer process 3 is 50861
+Process id of producer process 4 is 50862
+Producer 3 finished at 1532851774
+Producer 4 finished at 1532851774
+Producer 2 finished at 1532851774
+Consumer 4 finished at 1532851774
+Consumer 1 finished at 1532851774
+Consumer 3 finished at 1532851774
+Consumer 2 finished at 1532851774
+Producer 0 finished at 1532851774
+Producer 1 finished at 1532851774
+Consumer 0 finished at 1532851774

@@ -143,6 +143,7 @@ int main(int argc, char *argv[])
   if (N <= 0 || l*L != m*M) {
     err_msg("Parameter error");
   }
+  printf("N:%d, l:%d, L:%d, m:%d, M:%d\n", N, l, L, m, M);
 
   // リングバッファと制御変数の確保
   shmid = shmget(IPC_PRIVATE, sizeof(struct ringbuf) + (N-1)*sizeof(int), IPC_CREAT | 0666);

@@ -1,0 +1,601 @@
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+Process id of producer process 12 is 50943
+Process id of producer process 13 is 50944
+Process id of producer process 14 is 50945
+I am producer process.
+P#15 puts 27, #item is   1
+N:20, l:5, L:20, m:20, M:5
+I am consuer process.
+C#00 gets 27, #item is   0
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+I am producer process.
+P#03 puts 77, #item is   1
+C#00 gets 77, #item is   0
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+I am producer process.
+P#07 puts 66, #item is   1
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+I am producer process.
+P#01 puts 52, #item is   2
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+I am consuer process.
+C#01 gets 66, #item is   1
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+I am producer process.
+P#02 puts 59, #item is   2
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+I am producer process.
+P#00 puts 34, #item is   3
+P#15 puts 70, #item is   4
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+Process id of producer process 12 is 50943
+Process id of producer process 13 is 50944
+I am producer process.
+P#14 puts 70, #item is   5
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+Process id of producer process 12 is 50943
+Process id of producer process 13 is 50944
+Process id of producer process 14 is 50945
+Process id of producer process 15 is 50946
+Process id of producer process 16 is 50947
+Process id of producer process 17 is 50948
+Process id of producer process 18 is 50949
+I am producer process.
+P#19 puts 33, #item is   6
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+I am producer process.
+P#06 puts 48, #item is   7
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+I am producer process.
+P#11 puts 38, #item is   8
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+Process id of producer process 12 is 50943
+Process id of producer process 13 is 50944
+Process id of producer process 14 is 50945
+Process id of producer process 15 is 50946
+I am producer process.
+P#16 puts 51, #item is   9
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+I am consuer process.
+C#02 gets 52, #item is   8
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+I am producer process.
+P#08 puts 56, #item is   9
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+I am consuer process.
+C#04 gets 59, #item is   8
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+I am producer process.
+P#05 puts 41, #item is   9
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+I am producer process.
+P#12 puts 45, #item is  10
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+I am producer process.
+P#09 puts 74, #item is  11
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+Process id of producer process 12 is 50943
+Process id of producer process 13 is 50944
+Process id of producer process 14 is 50945
+Process id of producer process 15 is 50946
+Process id of producer process 16 is 50947
+I am producer process.
+P#17 puts 69, #item is  12
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+I am consuer process.
+C#03 gets 34, #item is  11
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+I am producer process.
+P#04 puts 23, #item is  12
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+Process id of producer process 12 is 50943
+I am producer process.
+P#13 puts 63, #item is  13
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+I am producer process.
+P#10 puts 20, #item is  14
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+Process id of producer process 12 is 50943
+Process id of producer process 13 is 50944
+Process id of producer process 14 is 50945
+Process id of producer process 15 is 50946
+Process id of producer process 16 is 50947
+Process id of producer process 17 is 50948
+I am producer process.
+P#18 puts 76, #item is  15
+P#19 puts 21, #item is  16
+P#12 puts 65, #item is  17
+P#06 puts 42, #item is  18
+P#16 puts 77, #item is  19
+C#03 gets 70, #item is  18
+P#07 puts 37, #item is  19
+P#13 puts 63, #item is  20
+C#02 gets 70, #item is  19
+P#02 puts 28, #item is  20
+C#04 gets 33, #item is  19
+P#03 puts 23, #item is  20
+C#01 gets 48, #item is  19
+P#10 puts 58, #item is  20
+C#00 gets 38, #item is  19
+P#05 puts 30, #item is  20
+C#04 gets 51, #item is  19
+P#02 puts 25, #item is  20
+C#03 gets 56, #item is  19
+P#03 puts 78, #item is  20
+C#00 gets 41, #item is  19
+P#01 puts 77, #item is  20
+C#01 gets 45, #item is  19
+P#06 puts 51, #item is  20
+C#02 gets 74, #item is  19
+P#00 puts 79, #item is  20
+C#04 gets 69, #item is  19
+P#01 puts 65, #item is  20
+C#00 gets 23, #item is  19
+P#03 puts 74, #item is  20
+C#01 gets 63, #item is  19
+P#02 puts 41, #item is  20
+C#03 gets 20, #item is  19
+P#00 puts 70, #item is  20
+C#00 gets 76, #item is  19
+P#01 puts 79, #item is  20
+C#03 gets 21, #item is  19
+P#03 puts 69, #item is  20
+C#02 gets 65, #item is  19
+P#06 puts 28, #item is  20
+C#03 gets 42, #item is  19
+P#10 puts 31, #item is  20
+C#04 gets 77, #item is  19
+P#19 puts 66, #item is  20
+C#01 gets 37, #item is  19
+P#00 puts 46, #item is  20
+C#00 gets 63, #item is  19
+P#02 puts 25, #item is  20
+C#03 gets 28, #item is  19
+P#01 puts 32, #item is  20
+C#01 gets 23, #item is  19
+P#00 puts 49, #item is  20
+C#02 gets 58, #item is  19
+P#06 puts 32, #item is  20
+C#03 gets 30, #item is  19
+P#05 puts 30, #item is  20
+C#01 gets 25, #item is  19
+P#09 puts 46, #item is  20
+C#04 gets 78, #item is  19
+P#10 puts 61, #item is  20
+C#03 gets 77, #item is  19
+C#01 gets 51, #item is  18
+P#12 puts 44, #item is  19
+P#18 puts 26, #item is  20
+C#00 gets 79, #item is  19
+P#16 puts 58, #item is  20
+C#02 gets 65, #item is  19
+P#08 puts 51, #item is  20
+C#01 gets 74, #item is  19
+P#10 puts 69, #item is  20
+C#04 gets 41, #item is  19
+P#15 puts 52, #item is  20
+C#02 gets 70, #item is  19
+P#07 puts 46, #item is  20
+C#03 gets 79, #item is  19
+P#05 puts 66, #item is  20
+C#00 gets 69, #item is  19
+P#04 puts 35, #item is  20
+C#04 gets 28, #item is  19
+P#08 puts 79, #item is  20
+C#01 gets 31, #item is  19
+P#09 puts 71, #item is  20
+C#04 gets 66, #item is  19
+P#08 puts 66, #item is  20
+C#02 gets 46, #item is  19
+P#13 puts 36, #item is  20
+C#00 gets 25, #item is  19
+P#19 puts 31, #item is  20
+C#03 gets 32, #item is  19
+P#07 puts 61, #item is  20
+C#01 gets 49, #item is  19
+P#05 puts 42, #item is  20
+C#00 gets 32, #item is  19
+P#15 puts 23, #item is  20
+C#03 gets 30, #item is  19
+P#12 puts 56, #item is  20
+C#02 gets 46, #item is  19
+P#07 puts 76, #item is  20
+C#04 gets 61, #item is  19
+P#04 puts 38, #item is  20
+C#00 gets 44, #item is  19
+P#08 puts 35, #item is  20
+C#01 gets 26, #item is  19
+P#16 puts 64, #item is  20
+C#03 gets 58, #item is  19
+P#12 puts 42, #item is  20
+C#02 gets 51, #item is  19
+P#09 puts 38, #item is  20
+C#01 gets 69, #item is  19
+P#13 puts 28, #item is  20
+C#00 gets 52, #item is  19
+P#17 puts 75, #item is  20
+C#04 gets 46, #item is  19
+P#15 puts 59, #item is  20
+C#03 gets 66, #item is  19
+P#19 puts 39, #item is  20
+C#02 gets 35, #item is  19
+P#04 puts 33, #item is  20
+C#04 gets 79, #item is  19
+P#14 puts 72, #item is  20
+C#00 gets 71, #item is  19
+P#18 puts 71, #item is  20
+C#01 gets 66, #item is  19
+P#17 puts 53, #item is  20
+C#02 gets 36, #item is  19
+P#09 puts 79, #item is  20
+C#03 gets 31, #item is  19
+P#13 puts 25, #item is  20
+C#02 gets 61, #item is  19
+P#04 puts 59, #item is  20
+C#00 gets 42, #item is  19
+P#16 puts 22, #item is  20
+C#01 gets 23, #item is  19
+C#03 gets 56, #item is  18
+P#11 puts 53, #item is  19
+P#18 puts 59, #item is  20
+C#04 gets 76, #item is  19
+P#17 puts 36, #item is  20
+C#01 gets 38, #item is  19
+P#17 puts 66, #item is  20
+C#00 gets 35, #item is  19
+P#11 puts 23, #item is  20
+C#03 gets 64, #item is  19
+P#18 puts 56, #item is  20
+C#02 gets 42, #item is  19
+C#01 gets 38, #item is  18
+P#14 puts 57, #item is  19
+C#04 gets 28, #item is  18
+P#11 puts 33, #item is  19
+C#00 gets 75, #item is  18
+C#04 gets 59, #item is  17
+C#01 gets 39, #item is  16
+C#02 gets 33, #item is  15
+C#03 gets 72, #item is  14
+P#11 puts 52, #item is  15
+C#02 gets 71, #item is  14
+P#14 puts 51, #item is  15
+C#01 gets 53, #item is  14
+C#00 gets 79, #item is  13
+C#04 gets 25, #item is  12
+C#04 gets 59, #item is  11
+C#03 gets 22, #item is  10
+C#01 gets 53, #item is   9
+P#14 puts 76, #item is  10
+C#03 gets 59, #item is   9
+C#02 gets 36, #item is   8
+C#00 gets 66, #item is   7
+C#04 gets 23, #item is   6
+C#02 gets 56, #item is   5
+C#04 gets 57, #item is   4
+C#00 gets 33, #item is   3
+C#02 gets 52, #item is   2
+C#04 gets 51, #item is   1
+C#02 gets 76, #item is   0
+N:20, l:5, L:20, m:20, M:5
+Process id of consumer process 0 is 50926
+Process id of consumer process 1 is 50927
+Process id of consumer process 2 is 50928
+Process id of consumer process 3 is 50929
+Process id of consumer process 4 is 50930
+Process id of producer process 0 is 50931
+Process id of producer process 1 is 50932
+Process id of producer process 2 is 50933
+Process id of producer process 3 is 50934
+Process id of producer process 4 is 50935
+Process id of producer process 5 is 50936
+Process id of producer process 6 is 50937
+Process id of producer process 7 is 50938
+Process id of producer process 8 is 50939
+Process id of producer process 9 is 50940
+Process id of producer process 10 is 50941
+Process id of producer process 11 is 50942
+Process id of producer process 12 is 50943
+Process id of producer process 13 is 50944
+Process id of producer process 14 is 50945
+Process id of producer process 15 is 50946
+Process id of producer process 16 is 50947
+Process id of producer process 17 is 50948
+Process id of producer process 18 is 50949
+Process id of producer process 19 is 50950
+Producer 3 finished at 1532851788
+Producer 0 finished at 1532851788
+Producer 6 finished at 1532851788
+Producer 1 finished at 1532851788
+Producer 2 finished at 1532851788
+Producer 10 finished at 1532851788
+Producer 5 finished at 1532851789
+Producer 7 finished at 1532851789
+Producer 12 finished at 1532851789
+Producer 8 finished at 1532851789
+Producer 15 finished at 1532851789
+Producer 19 finished at 1532851789
+Producer 9 finished at 1532851789
+Producer 16 finished at 1532851789
+Producer 13 finished at 1532851789
+Producer 4 finished at 1532851789
+Producer 17 finished at 1532851789
+Producer 18 finished at 1532851789
+Producer 11 finished at 1532851789
+Consumer 1 finished at 1532851789
+Consumer 3 finished at 1532851789
+Producer 14 finished at 1532851789
+Consumer 0 finished at 1532851789
+Consumer 4 finished at 1532851789
+Consumer 2 finished at 1532851789
