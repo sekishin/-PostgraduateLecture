@@ -37,9 +37,7 @@ void producer(Params *p)
     int rnd;
     int prod_No = p->no;
     int pnum = p-> size;
-    #ifdef TIME
     printf("I am producer thread %d.\n", prod_No);
-    #endif
     srand(time(NULL) ^ (prod_No << 8));
     for (; pnum; pnum--) {
         rnd = genrnd(20,80);
@@ -57,9 +55,7 @@ void producer(Params *p)
         rbuf->buf[rbuf->wptr++] = rnd;
         rbuf->wptr %= rbuf->bufsize;
         rbuf->n_item++;
-        #ifdef TIME
         printf("P#%02d puts %2d, #item is %3d\n", prod_No, rnd, rbuf->n_item);
-        #endif
         fflush(stdout);
         pthread_mutex_unlock(&lockval);
         rnd = genrnd(20,80);
@@ -74,9 +70,7 @@ void consumer(Params *p)
     int cons_No = p->no;
     int cnum = p->size;
     
-    #ifdef TIME
     printf("I am consuer thread %d.\n", cons_No);
-    #endif
     for (; cnum; cnum--) {
         // pick number from ring buffer
         while (1) {
@@ -92,9 +86,7 @@ void consumer(Params *p)
         rnd = rbuf->buf[rbuf->rptr++];
         rbuf->rptr %= rbuf->bufsize;
         rbuf->n_item--;
-        #ifdef TIME
         printf("C#%02d gets %d, #item is %3d\n", cons_No, rnd, rbuf->n_item);
-        #endif
         fflush(stdout);
         pthread_mutex_unlock(&lockval);
         usleep(rnd*1000);
@@ -134,12 +126,9 @@ int main(int argc, char *argv[])
     L = atoi(argv[3]);
     m = atoi(argv[4]);
     M = atoi(argv[5]);
-    if (N <= 0 || l*L != m*M) {
+    if (N <= 0 || l*L != m*M || L > THNUM || M > THNUM) {
         err_msg("Parameter error");
     }
-    #ifdef TIME
-    printf("N:%d, l:%d, L:%d, m:%d, M:%d\n", N, l, L, m, M);
-    #endif
     
     // リングバッファと制御変数の確保
     rbuf = (struct ringbuf *)malloc(sizeof(struct ringbuf)); 
