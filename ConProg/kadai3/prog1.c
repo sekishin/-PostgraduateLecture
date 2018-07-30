@@ -7,7 +7,7 @@
 
 #define SIZE 256	// 正方行列の最大サイズ
 #define THNUM 100	// 生成するスレッドの最大数
-#define LOOP 1000	// 時間計測で繰り返す回数
+#define LOOP 100	// 時間計測で繰り返す回数
 
 int A[SIZE][SIZE], B[SIZE][SIZE], C[SIZE][SIZE];	// 行列
 
@@ -83,6 +83,7 @@ int main(int argc, char **argv)
 	Parts ps[THNUM];
 	int num;
 	int t;
+	int l;
 	double start, end;
 	clock_t s, e;
 
@@ -93,28 +94,29 @@ int main(int argc, char **argv)
 	if (n <= 0 || SIZE < n) error("illegal matrix size");
 	if (thnum <= 0 || THNUM < thnum) error("illegal thread size");
 
+	srand((unsigned) time(NULL));
+	start = gettimeofday_msec();
+	s = clock();
+	for (l = 0; l < LOOP; l++) {
 	/* 初期化 */
-	num = 0;
-	for (i = 0; i < n; i++) {
-		for (j = 0; j < n; j++) {
-			A[i][j] = rand() % 100;
-			B[i][j] = rand() % 100;
-			t = num % thnum;
-			if (num == t) ps[num].size = 0;
-			Part tmp = {i, j, n};
-			ps[t].p[ps[t].size] = tmp;
-			ps[t].size++;
-			num++;
+		num = 0;
+		for (i = 0; i < n; i++) {
+			for (j = 0; j < n; j++) {
+				A[i][j] = rand() % 100;
+				B[i][j] = rand() % 100;
+				t = num % thnum;
+				if (num == t) ps[num].size = 0;
+				Part tmp = {i, j, n};
+				ps[t].p[ps[t].size] = tmp;
+				ps[t].size++;
+				num++;
+			}
 		}
-	}
 #ifdef DEBUG
-	show_matrix(n);
+		show_matrix(n);
 #endif
 	
 	/* スレッド生成 */
-	start = gettimeofday_msec();
-	s = clock();
-	for (t = 0; t < LOOP; t++) {
 		for (num = 0; num < thnum; num++) {
 			pthread_create(&threads[num], NULL, (void *)calc_matrix, &ps[num]);
 		}

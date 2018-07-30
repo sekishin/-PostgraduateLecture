@@ -24,36 +24,13 @@ double gettimeofday_msec()
 }
 
 // ring buffer
-struct ringbuf {
+struct ringbuf{
   int bufsize; // The size of ring buffer. If minus values indicates illegal state.
   int wptr, rptr;
   int n_item;  // The number of items in ring buffer
   int buf[1];  // For variable array size
 } *rbuf;
 
-// semaphor and shared memory
-int semid;
-int shmid;
-
-void P()
-{
-  struct sembuf sops;
-  
-  sops.sem_num = 0;		// semaphore number
-  sops.sem_op = -1;		// operation (decrement semaphore)
-  sops.sem_flg = SEM_UNDO;	// The operarion is canceled when the calling porcess terminates
-  semop(semid, &sops, 1);	// Omitt error handling
-}
-
-void V()
-{
-  struct sembuf sops;
-  
-  sops.sem_num = 0;		// semaphore number
-  sops.sem_op = 1;		// operation (increment semaphore)
-  sops.sem_flg = SEM_UNDO;	// The operarion is canceled when the calling porcess terminates
-  semop(semid, &sops, 1);	// Omitt error handling
-}
 
 typedef struct {
   int no;
@@ -61,27 +38,43 @@ typedef struct {
 } Params;
 
 
+pthread_mutex_t lockval;
+
+// semaphor and shared memory
+int semid;
+int shmid;
+
+// release share memory and semaphore
+void release()
+{
+  if (shmctl(shmid, IPC_RMID, NULL)) {
+    perror("shmctl");
+  }
+  if (semctl(semid, 0, IPC_RMID)) {
+    perror("semctl");
+  }
+}
 void producer(Params *p)
 {
   int rnd;
   int prod_No = p->no;
   int pnum = p-> size;
 #ifdef TIME
-  printf("I am producer process.\n");
+  printf("I am producer thread %d.\n", prod_No);
 #endif
   srand(time(NULL) ^ (prod_No << 8));
   for (; pnum; pnum--) {
     rnd = genrnd(20,80);
     // put random number into ring buffer
     while (1) {
-      P();
+      pthread_mutex_lock(&lockval);
       if (rbuf->bufsize > rbuf->n_item) break;
       if (rbuf->bufsize < 0) {  // illegal state occurs and operation stops
-        V();
+        pthread_mutex_unlock(&lockval);
         return;
       }
       usleep(1); // reduce waste of CPU resource
-      V();
+      pthread_mutex_unlock(&lockval);
     }
     rbuf->buf[rbuf->wptr++] = rnd;
     rbuf->wptr %= rbuf->bufsize;
@@ -90,7 +83,7 @@ void producer(Params *p)
     printf("P#%02d puts %2d, #item is %3d\n", prod_No, rnd, rbuf->n_item);
 #endif
     fflush(stdout);
-    V();
+    pthread_mutex_unlock(&lockval);
     rnd = genrnd(20,80);
     usleep(rnd*1000);
   }
@@ -104,19 +97,19 @@ void consumer(Params *p)
   int cnum = p->size;
 
 #ifdef TIME
-  printf("I am consuer process.\n");
+  printf("I am consuer thread %d.\n", cons_No);
 #endif
   for (; cnum; cnum--) {
     // pick number from ring buffer
     while (1) {
-      P();
+      pthread_mutex_lock(&lockval);
       if (rbuf->n_item) break;
       if (rbuf->bufsize < 0) {  // illegal state and stop operation
-        V();
+        pthread_mutex_unlock(&lockval);
         return;
       }
       usleep(1); // reduce waste of CPU
-      V();
+      pthread_mutex_unlock(&lockval);
     }
     rnd = rbuf->buf[rbuf->rptr++];
     rbuf->rptr %= rbuf->bufsize;
@@ -125,22 +118,12 @@ void consumer(Params *p)
     printf("C#%02d gets %d, #item is %3d\n", cons_No, rnd, rbuf->n_item);
 #endif
     fflush(stdout);
-    V();
+    pthread_mutex_unlock(&lockval);
     usleep(rnd*1000);
   }
   pthread_exit(0);
 }
 
-// release share memory and semaphore
-void release()
-{
-  if (shmctl(shmid, IPC_RMID, NULL)) {
-    perror("shmctl");
-  }
-  if (semctl(semid, 0, IPC_RMID)) {
-    perror("semctl");
-  }
-}
 
 void err_msg(char *msg)
 {
@@ -186,18 +169,20 @@ int main(int argc, char *argv[])
 #endif
 
   // リングバッファと制御変数の確保
-  shmid = shmget(IPC_PRIVATE, sizeof(struct ringbuf) + (N-1)*sizeof(int), IPC_CREAT | 0666);
-  if (shmid == -1) {
-    err_msg("shmget");
-  }
-  rbuf = (struct ringbuf *)shmat(shmid, NULL, 0);
-  if (rbuf == (struct ringbuf *)-1) {
-    err_msg("shmat");
-  }
+  //shmid = shmget(IPC_PRIVATE, sizeof(struct ringbuf) + (N-1)*sizeof(int), IPC_CREAT | 0666);
+  //if (shmid == -1) {
+    //err_msg("shmget");
+  //}
+  rbuf = (struct ringbuf *)malloc(sizeof(struct ringbuf)); //shmat(shmid, NULL, 0);
+  if (rbuf == NULL/*(struct ringbuf *)-1*/) {
+    err_msg("malloc");
+  } 
   rbuf->bufsize = N;
   rbuf->n_item = 0;
   rbuf->wptr = rbuf->rptr = 0;
-  semid = semget(IPC_PRIVATE, 1, IPC_CREAT | 0666);
+  pthread_mutex_init(&lockval, NULL);
+  
+  /*semid = semget(IPC_PRIVATE, 1, IPC_CREAT | 0666);
   if (semid == -1) {
     perror("semget");
     if (shmctl(shmid, IPC_RMID, NULL)) { // release shared memory area
@@ -209,14 +194,12 @@ int main(int argc, char *argv[])
     perror("semctl at initializing value of semaphore"); 
     release();
     exit(1);
-  }
+  }*/
 
   start = clock();
   time(&x1);
   t1 = gettimeofday_msec();
-  //for (i=0; i<LOOP; i++) {
   //printf("N:%d, l:%d, L:%d, m:%d, M:%d\n", N, l, L, m, M);
-  //printf("%d\n",i);
   // create consumer
   n_cons = 0;
   while (n_cons < M) {
@@ -224,7 +207,7 @@ int main(int argc, char *argv[])
     c_params[n_cons] = tmp;
     pthread_create(&c_threads[n_cons], NULL, (void *)consumer, &c_params[n_cons]);
 #ifdef TIME
-    printf("Thread id of consumer %d \n", n_cons);
+    printf("Thread consumer %d created. \n", n_cons);
 #endif
     n_cons++;
   }
@@ -236,7 +219,7 @@ int main(int argc, char *argv[])
     p_params[n_prod] = tmp;
     pthread_create(&p_threads[n_prod], NULL, (void *)producer, &p_params[n_prod]);
 #ifdef TIME
-    printf("Thread id of producer %d \n", n_prod);
+    printf("Thread producer %d created.\n", n_prod);
 #endif
     n_prod++;
   }
@@ -253,13 +236,12 @@ int main(int argc, char *argv[])
     printf("finish consumer thread %d with return value %d\n", pnum, status);
 #endif
   }
-  //}
   t2 = gettimeofday_msec();
   time(&x2);
   end = clock();
   printf("processing time(clock): %.2fms\n", (double)(end-start)/LOOP);
   printf("processing time(gettimeofday): %.2fms\n", (t2-t1)/LOOP);
   printf("processing time(time): %.2fms\n", (x2-x1)/LOOP);
-  release();
+  //release();
   return 0;
 }
