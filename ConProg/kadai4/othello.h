@@ -30,8 +30,10 @@ typedef struct {
 typedef struct {
   Board brd;    // 盤面
   Piece turn;    // 手番
+  Hand last;    // 1つ前の手
   bool isEnd;    // 終了フラグ
   bool isPass;    // パスフラグ
+  bool isBegin;
 } GameState;
 
 //========================関数宣言=========================
@@ -78,9 +80,10 @@ void player(GameState *gs, THands t_hands) {
         }
         printf("そこには打てません\n");
     }
-    printf("%d %d\n", hand.x, hand.y);
+    //printf("%d %d\n", hand.x, hand.y);
     gs->isPass = false;
     gs->isEnd = end_check(gs->brd);
+    gs->last = hand;
 }
 
 //========================初期化処理========================
@@ -90,6 +93,7 @@ GameState game_init(void) {
   newState.turn = BLK;
   newState.isEnd = false;
   newState.isPass = false;
+  newState.isBegin = false;
   return newState;
 }
 
@@ -116,6 +120,17 @@ void brd_output(GameState gs, THands *t_hands) {
     Board tmp_b;
     Board brd = gs.brd;
     Piece c = gs.turn;
+    if (gs.isBegin) {
+      if (gs.turn == BLK) {
+        if (gs.isPass) printf("白は パス しました\n");
+        else printf("白が (%d, %d)に置きました\n", gs.last.x, gs.last.y);
+      } else if (gs.turn == WHT) {
+        if (gs.isPass) printf("黒は パス しました\n");
+        else printf("黒が (%d, %d)に置きました\n", gs.last.x, gs.last.y);
+      }
+    } else {
+      puts("Game Start");
+    }
 
     //-- 出力処理
     t_hands->size = 1;

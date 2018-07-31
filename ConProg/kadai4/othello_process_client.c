@@ -54,16 +54,20 @@ int main(int argc, char *argv[])
   // メッセージを受信
   read(sockfd, &gs, sizeof(GameState));    // 初期盤面受け取り
   brd_output(gs, &t_hands);    // 初期盤面出力
+  gs.isBegin = true;
   while (1) {
     player(&gs, t_hands);  // ハンド入力、盤面更新
     brd_output_simple(gs);
+    turn_change(&gs);
     write(sockfd, &gs, sizeof(GameState));    // 更新盤面送信
     if (gs.isEnd) break;
     read(sockfd, &gs, sizeof(GameState));    // 更新盤面受取
+    sleep(1);
     brd_output(gs, &t_hands);
     if (gs.isEnd) break;
   }
   puts("Game Over");
+  winner_check(gs.brd);
   //  コネクション切断
   close(sockfd);
   return 0;
