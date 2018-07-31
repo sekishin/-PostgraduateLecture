@@ -1,17 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <sys/sem.h>
+#include <fcntl.h>
+#include <string.h>
+#include <errno.h>
 #include <sys/types.h>
-#include <sys/ipc.h>
-#include <sys/shm.h>
-#include <sys/sem.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
 #include <sys/wait.h>
-#include <time.h>
+#include <unistd.h>
+#include <netdb.h>
+#include <sys/file.h>
 #include "othello.h"
 
 #define SERV_TCP_PORT 20471
-#define RECORD_SIZE 100
 
 void err_msg(char *msg)
 {
@@ -31,6 +32,8 @@ int main(int argc, char const *argv[])
   struct sockaddr_in serv_addr, cli_addr;
   socklen_t cli_len = sizeof(cli_addr);
   int pid;
+  int chnum = 0;
+  int status;
 
   // ソケット生成
   port_no = SERV_TCP_PORT;
@@ -94,7 +97,7 @@ int main(int argc, char const *argv[])
         if (gs.isEnd) break;
         // AI実行
         brd_output_simple(gs);
-        turn_change(&gs);
+        //turn_change(&gs);
         write(sockfd, &gs, sizeof(GameState));    // 盤面送る
         if (gs.isEnd) break;
       }
