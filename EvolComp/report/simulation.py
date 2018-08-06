@@ -53,7 +53,7 @@ if __name__ == "__main__":
             for m in ['myPSO', 'myDE', 'myFA']:
                 title = str(d)+f+m
                 x_log = result[f][m]['x_log']
-                makeAnimation(x_log, title)
+                #makeAnimation(x_log, title)
                 f_log.append(result[f][m]['f_log'])
             title = str(d)+f
-            makeGraph(f_log, title, label)
+            #makeGraph(f_log, title, label)

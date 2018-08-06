@@ -65,6 +65,7 @@ def myFA(D, func):
             else: I[i] = 1 / f[i]
         for i in range(M):
             cnt = 0
+            x_new[i] = copy.deepcopy(x[i])
             for j in range(M):
                 if I[i] < I[j]:
                     cnt += 1
@@ -74,6 +75,9 @@ def myFA(D, func):
                     x_new[i] = calc_x_new(x[i], x[j], alpha, beta, e)
             if cnt == 0:
                 k = i
+                e = make_random_vector(D, x_max, x_min)
+                for l in range(D):
+                    x_new[k][l] += alpha * e[l]
         if f[k] < f_best:
             f_best = f[k]
             x_best = copy.deepcopy(x[k])
