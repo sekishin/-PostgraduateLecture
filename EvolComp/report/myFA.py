@@ -72,7 +72,7 @@ def myFA(D, func):
                     e = make_random_vector(D, x_max, x_min)
                     r = calc_r(x_new[i], x[j])
                     beta = (1-b_min) * math.e**(-gamma*r**2)+b_min
-                    x_new[i] = calc_x_new(x_new[i], x[j], alpha, beta, e)
+                    x_new[i] = calc_x_new(x[i], x[j], alpha, beta, e)
             if cnt == 0:
                 k = i
                 e = make_random_vector(D, x_max, x_min)

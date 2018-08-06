@@ -69,9 +69,9 @@ def myFA(D, func):
             for j in range(M):
                 if I[i] < I[j]:
                     cnt += 1
+                    e = make_random_vector(D, x_max, x_min)
                     r = calc_r(x[i], x[j])
                     beta = (1-b_min) * math.e**(-gamma*r**2)+b_min
-                    e = make_random_vector(D, x_max, x_min)
                     x_new[i] = calc_x_new(x[i], x[j], alpha, beta, e)
             if cnt == 0:
                 k = i
