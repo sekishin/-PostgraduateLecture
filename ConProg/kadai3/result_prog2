@@ -1,0 +1,81 @@
+N:10, l:5, L:5, m:5, M:5
+Thread consumer 0 created. 
+I am consuer thread 0.
+Thread consumer 1 created. 
+I am consuer thread 1.
+Thread consumer 2 created. 
+I am consuer thread 2.
+Thread consumer 3 created. 
+I am consuer thread 3.
+Thread consumer 4 created. 
+Thread producer 0 created.
+I am consuer thread 4.
+Thread producer 1 created.
+I am producer thread 0.
+I am producer thread 1.
+Thread producer 2 created.
+I am producer thread 2.
+Thread producer 3 created.
+I am producer thread 3.
+P#03 puts 63, #item is   1
+Thread producer 4 created.
+C#04 gets 63, #item is   0
+I am producer thread 4.
+P#04 puts 20, #item is   1
+C#01 gets 20, #item is   0
+P#00 puts 70, #item is   1
+P#01 puts 27, #item is   2
+P#02 puts 45, #item is   3
+C#03 gets 70, #item is   2
+C#00 gets 27, #item is   1
+C#02 gets 45, #item is   0
+P#04 puts 62, #item is   1
+C#01 gets 62, #item is   0
+P#01 puts 61, #item is   1
+C#00 gets 61, #item is   0
+P#03 puts 21, #item is   1
+C#04 gets 21, #item is   0
+P#00 puts 69, #item is   1
+C#03 gets 69, #item is   0
+P#00 puts 64, #item is   1
+C#00 gets 64, #item is   0
+P#01 puts 49, #item is   1
+C#02 gets 49, #item is   0
+P#04 puts 21, #item is   1
+C#04 gets 21, #item is   0
+P#04 puts 70, #item is   1
+P#03 puts 78, #item is   2
+C#01 gets 70, #item is   1
+P#02 puts 43, #item is   2
+P#01 puts 25, #item is   3
+C#03 gets 78, #item is   2
+P#00 puts 58, #item is   3
+C#04 gets 43, #item is   2
+C#02 gets 25, #item is   1
+C#00 gets 58, #item is   0
+P#04 puts 72, #item is   1
+C#02 gets 72, #item is   0
+P#01 puts 61, #item is   1
+C#04 gets 61, #item is   0
+P#00 puts 22, #item is   1
+P#02 puts 36, #item is   2
+C#01 gets 22, #item is   1
+P#03 puts 50, #item is   2
+C#00 gets 36, #item is   1
+C#03 gets 50, #item is   0
+finish producer thread 0 with return value 0
+finish producer thread 1 with return value 0
+P#02 puts 42, #item is   1
+C#02 gets 42, #item is   0
+P#03 puts 41, #item is   1
+C#03 gets 41, #item is   0
+P#02 puts 71, #item is   1
+C#01 gets 71, #item is   0
+finish producer thread 2 with return value 0
+finish producer thread 3 with return value 0
+finish producer thread 4 with return value 0
+finish consumer thread 0 with return value 0
+finish consumer thread 1 with return value 0
+finish consumer thread 2 with return value 0
+finish consumer thread 3 with return value 0
+finish consumer thread 4 with return value 0
