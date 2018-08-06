@@ -38,7 +38,7 @@ int main(int argc, char const *argv[])
   int chnum = 0;
   int status;
 
-  srand((unsigned)time(NULL));
+
 
   // ソケット生成
   port_no = SERV_TCP_PORT;
@@ -107,6 +107,8 @@ int main(int argc, char const *argv[])
         fprintf(stderr, "\nI am child process%d\n", getpid());
         puts("send client");
         brd_output_simple(gs);
+        puts("===============================================================");
+        sleep(1);
         turn_change(&gs);
         write(sockfd, &gs, sizeof(GameState));    // 盤面送る
         if (gs.isEnd) break;
@@ -139,6 +141,9 @@ void AI(GameState *gs, THands t_hands) {
     gs->isPass = true;
     return;
   }
+
+  srand((unsigned)time(NULL) ^ (getpid() << 8));
+
   printf("AI's Hand > ");
   //-- 打ち手決定（乱数）
   while (1) {

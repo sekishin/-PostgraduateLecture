@@ -160,7 +160,7 @@ void brd_output_simple(GameState gs) {
     int x, y;    // 反復変数
     Board brd = gs.brd;
     Piece c = gs.turn;
-
+    puts("");
     //-- 出力処理
     for ( x = 0; x < SIZE; x++) {
         for ( y = 0; y < SIZE; y++ ) {
