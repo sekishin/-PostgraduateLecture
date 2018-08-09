@@ -31,7 +31,7 @@ def make_random_vector(D, x_max, x_min):
 def calc_x_new(xi, xj, alpha, beta, e):
     x_new = []
     for i, j, k in zip(xi, xj, e):
-        x_new.append(i+beta*(j-i)+alpha*k) 
+        x_new.append(i+beta*(j-i)+alpha*k)
     return x_new
 
 def myFA(D, func):
@@ -44,7 +44,7 @@ def myFA(D, func):
     x_max = 5
     L = math.fabs(x_max - x_min)/2
     gamma = math.sqrt(L)
-    x = [[random.uniform(x_max,x_min) for i in range(D)] for j in range(M)] 
+    x = [[random.uniform(x_max,x_min) for i in range(D)] for j in range(M)]
     x_new = [[0 for i in range(D)] for j in range(M)]
     f = [0 for i in range(M)]
     I = [0 for i in range(M)]
@@ -87,7 +87,7 @@ def myFA(D, func):
         f_log.append(f_best)
         if f_best < f_end: break
     return t, f_best, x_log, f_log
-            
+
 
 def simulation(D,func):
     time = []
@@ -103,20 +103,20 @@ def simulation(D,func):
         if len(x) > len(x_log):
             x_log = x
         if len(log) > len(f_log):
-          f_log = log
+            f_log = log
         pbar.update(1)
     pbar.close()
     std = np.array(f_value)
     print(D, func.__name__, mean(f_value), np.var(std,ddof=0), np.var(std,ddof=1), mean(time))
-    #makeAnimation(x_log, title)
+    makeAnimation(x_log, title)
 
 if __name__ == "__main__":
     print("D, function, f-value mean, f-value var, f-value std-var, loop time mean")
     simulation(2, sphere)
     simulation(2, rastrigin)
-    
+
     simulation(5, sphere)
     simulation(5, rastrigin)
-    
+
     simulation(20, sphere)
     simulation(20, rastrigin)
