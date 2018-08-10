@@ -7,13 +7,15 @@ def makeGraph(data, save, label):
     ax = fig.add_subplot(1,1,1)
     ax.grid()
     ax.set_xlabel("t")
+    plt.yscale("log")
+    plt.ylim(10**-6, 10**2)
     ax.set_ylabel("f_best")
     ax.set_title(save)
     color = ["red","green","blue"]
     for d, l, c in zip(data, label, color):
         x = [i for i in range(1,len(d)+1)]
         plt.plot(x, d, color=c, label=l)
-    plt.legend(loc=2)
+    plt.legend(loc=1)
     plt.savefig(save+".png")
     plt.close()
 

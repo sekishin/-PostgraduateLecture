@@ -30,7 +30,7 @@ def simulation(D, func, method):
 
 def exec_simulation(D):
     methods = [myPSO, myDE, myFA]
-    funcs = [sphere, rastrigin]
+    funcs = [sphere]
     result = {}
     for f in funcs:
         data = {}
@@ -45,9 +45,9 @@ def exec_simulation(D):
 
 if __name__ == "__main__":
     print("D, method, function, f-value mean, f-value var, f-value std-var, loop time mean")
-    for d in [2, 5, 20]:
+    for d in range(10,101,10):
         result = exec_simulation(d)
-        for f in ['sphere', 'rastrigin']:
+        for f in ['sphere']:
             f_log = []
             label = ['PSO', 'DE', 'FA']
             for m in ['myPSO', 'myDE', 'myFA']:
@@ -56,4 +56,4 @@ if __name__ == "__main__":
                 #makeAnimation(x_log, title)
                 f_log.append(result[f][m]['f_log'])
             title = str(d)+f
-            makeGraph(f_log, title, label)
+            #makeGraph(f_log, title, label)

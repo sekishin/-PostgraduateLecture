@@ -58,7 +58,6 @@ def myFA(D, func):
     f_log = []
     f_log.append(f_best)
     while t < t_max:
-        pprint(x)
         t += 1
         alpha = alpha0*(10**-4/0.9)**(t/t_max)
         for i in range(M):
